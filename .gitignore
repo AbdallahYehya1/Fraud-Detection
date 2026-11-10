@@ -1,0 +1,28 @@
+# Repository-level ignores. The application has its own rules in fraud-investigation/.gitignore.
+
+# environments, tools, caches
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+*.stackdump
+
+# local editor/agent settings
+.claude/
+
+# canonical raw data: verified by checksum, never committed (see outputs/data/README.md)
+outputs/data/*.zip
+work/data/
+*.csv
+*.zip
+
+# demo recording tooling and raw captures (large, regenerable)
+work/recording-tools/
+work/demo/raw/
+work/demo/raw-part2/
+work/demo/*.webm
+
+# secrets
+.env
+*.token
+*.key

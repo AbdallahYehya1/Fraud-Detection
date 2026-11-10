@@ -1,0 +1,271 @@
+{
+  "model": "qwen3:4b",
+  "base_url": "http://127.0.0.1:11434",
+  "num_ctx": 4096,
+  "ollama_version": "0.40.15",
+  "memory_before": {
+    "total_gib": 15.77,
+    "available_gib": 0.62
+  },
+  "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "model_size_bytes": 2497293931,
+  "model_details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen3",
+    "families": [
+      "qwen3"
+    ],
+    "parameter_size": "4.0B",
+    "quantization_level": "Q4_K_M",
+    "context_length": 262144,
+    "embedding_length": 2560,
+    "runner": "ggml"
+  },
+  "warm_load": {
+    "seconds": 1.54,
+    "reply": "OK",
+    "total_duration": 1534288000,
+    "load_duration": 7399100,
+    "prompt_eval_count": 14,
+    "prompt_eval_duration": 295168000,
+    "eval_count": 87,
+    "eval_duration": 1206613000,
+    "tokens_per_second": 72.1
+  },
+  "loaded": {
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "size": 3180247121,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-09T23:30:27.3320579+02:00",
+        "size_vram": 3180247121,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "memory_loaded": {
+    "total_gib": 15.77,
+    "available_gib": 0.6,
+    "processes": [
+      {
+        "Name": "llama-server",
+        "WS_MiB": 0,
+        "Peak_MiB": 228
+      },
+      {
+        "Name": "llama-server",
+        "WS_MiB": 4020,
+        "Peak_MiB": 4020
+      },
+      {
+        "Name": "ollama",
+        "WS_MiB": 48,
+        "Peak_MiB": 84
+      }
+    ]
+  },
+  "grounded_summary": {
+    "seconds": 22.84,
+    "response": "The transaction [E1] involves a transfer of 181,500 simulation currency units from sender C-FIX-100 to recipient C-FIX-200 at step 210. The model [E3] provides a risk score of 0.87 and daily rank 3, but this ranking score is not a calibrated probability of fraud. The dataset lacks sender history (no earlier records) and device, location, and identity data for further analysis.",
+    "checks": {
+      "numbers_found": [
+        0.0,
+        0.87,
+        3.0,
+        210.0,
+        181500.0
+      ],
+      "unsupported_numbers": [],
+      "citations": [
+        "[E1]",
+        "[E3]"
+      ],
+      "invalid_citations": [],
+      "mentions_no_history": true,
+      "asserts_fraud_as_fact": false,
+      "reasoning_leaked_into_content": false,
+      "passed": true
+    },
+    "thinking_chars": 5870,
+    "total_duration": 22836933600,
+    "load_duration": 6113300,
+    "prompt_eval_count": 352,
+    "prompt_eval_duration": 179757000,
+    "eval_count": 1552,
+    "eval_duration": 22646510000,
+    "tokens_per_second": 68.53
+  },
+  "native_tool_call": {
+    "first_call_seconds": 6.65,
+    "tool_calls": [
+      {
+        "id": "call_tdpszfs8",
+        "function": {
+          "index": 0,
+          "name": "get_case_evidence",
+          "arguments": {
+            "case_id": "CASE-FIX-001"
+          }
+        }
+      }
+    ],
+    "first_perf": {
+      "total_duration": 6652267900,
+      "load_duration": 12845400,
+      "prompt_eval_count": 237,
+      "prompt_eval_duration": 15391000,
+      "eval_count": 460,
+      "eval_duration": 6588420000,
+      "tokens_per_second": 69.82
+    },
+    "tool_call_valid": true,
+    "second_call_seconds": 16.67,
+    "response": "A transfer of 181,500 simulation currency units from sender C-FIX-100 to recipient C-FIX-200 occurred at step 210 [E1].  \nRecipient C-FIX-200 shows no prior transaction history in this dataset prior to step 210 [E2].  \nThe model assessment indicates a risk score of 0.87 and daily rank 3 [E3], though sender history and device/location data are unavailable in the evidence.",
+    "checks": {
+      "numbers_found": [
+        0.0,
+        0.87,
+        3.0,
+        210.0,
+        181500.0
+      ],
+      "unsupported_numbers": [],
+      "citations": [
+        "[E1]",
+        "[E2]",
+        "[E3]"
+      ],
+      "invalid_citations": [],
+      "mentions_no_history": true,
+      "asserts_fraud_as_fact": false,
+      "reasoning_leaked_into_content": false,
+      "passed": true
+    },
+    "thinking_chars": 3978,
+    "second_perf": {
+      "total_duration": 16666704200,
+      "load_duration": 16734900,
+      "prompt_eval_count": 949,
+      "prompt_eval_duration": 386534000,
+      "eval_count": 1086,
+      "eval_duration": 16200034000,
+      "tokens_per_second": 67.04
+    },
+    "extra_tool_calls": null,
+    "passed": true
+  },
+  "openai_compatible_tool_call": {
+    "first_call_seconds": 6.83,
+    "tool_calls": [
+      {
+        "id": "call_mzochaz7",
+        "index": 0,
+        "type": "function",
+        "function": {
+          "name": "get_case_evidence",
+          "arguments": "{\"case_id\":\"CASE-FIX-001\"}"
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 237,
+      "prompt_tokens_details": {
+        "cached_tokens": 236
+      },
+      "completion_tokens": 460,
+      "total_tokens": 697
+    },
+    "tool_call_valid": true,
+    "second_call_seconds": 16.44,
+    "response": "A transfer of 181,500 simulation currency units from sender C-FIX-100 to recipient C-FIX-200 occurred at step 210 [E1].  \nRecipient C-FIX-200 shows no prior transaction history in this dataset prior to step 210 [E2].  \nThe model assessment indicates a risk score of 0.87 and daily rank 3 [E3], though sender history and device/location data are unavailable in the evidence.",
+    "checks": {
+      "numbers_found": [
+        0.0,
+        0.87,
+        3.0,
+        210.0,
+        181500.0
+      ],
+      "unsupported_numbers": [],
+      "citations": [
+        "[E1]",
+        "[E2]",
+        "[E3]"
+      ],
+      "invalid_citations": [],
+      "mentions_no_history": true,
+      "asserts_fraud_as_fact": false,
+      "reasoning_leaked_into_content": false,
+      "passed": true
+    },
+    "reasoning_field_present": true,
+    "usage2": {
+      "prompt_tokens": 949,
+      "prompt_tokens_details": {
+        "cached_tokens": 948
+      },
+      "completion_tokens": 1086,
+      "total_tokens": 2035
+    },
+    "passed": true
+  },
+  "wrong_id": {
+    "tool_calls": [
+      {
+        "id": "call_3rtpsjgc",
+        "function": {
+          "index": 0,
+          "name": "get_case_evidence",
+          "arguments": {
+            "case_id": "CASE-FIX-999"
+          }
+        }
+      }
+    ],
+    "first_call_seconds": 4.65,
+    "second_call_seconds": 3.35,
+    "response": "The case identifier CASE-FIX-999 was not found in the system. [E1]",
+    "invented_case_numbers": [],
+    "invalid_citations": [
+      "[E1]"
+    ],
+    "reasoning_leaked_into_content": false,
+    "passed": false
+  },
+  "memory_after": {
+    "total_gib": 15.77,
+    "available_gib": 0.47,
+    "processes": [
+      {
+        "Name": "llama-server",
+        "WS_MiB": 0,
+        "Peak_MiB": 228
+      },
+      {
+        "Name": "llama-server",
+        "WS_MiB": 4278,
+        "Peak_MiB": 4303
+      },
+      {
+        "Name": "ollama",
+        "WS_MiB": 48,
+        "Peak_MiB": 84
+      }
+    ]
+  },
+  "passed": false
+}

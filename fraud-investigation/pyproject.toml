@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fraudinv"
+version = "0.1.0"
+description = "Fraud detection and investigation MVP on synthetic PaySim v2 data"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas==2.3.3",
+    "numpy==2.3.4",
+    "pyarrow==22.0.0",
+    "duckdb==1.4.1",
+    "pyyaml==6.0.3",
+    "scikit-learn==1.7.2",
+    "httpx==0.28.1",
+    "fastapi==0.121.0",
+    "uvicorn==0.38.0",
+    "psycopg[binary]==3.2.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[project.scripts]
+fraudinv = "fraudinv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["data: needs the full PaySim CSV/Parquet (skipped when absent)", "db: needs the local PostgreSQL container (skipped when unreachable)"]

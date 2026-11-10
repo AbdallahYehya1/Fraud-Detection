@@ -1,0 +1,1521 @@
+{
+  "audit": "day1-data-quality",
+  "contract_versions": {
+    "split": "split-v1",
+    "features": "features-v1"
+  },
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "cpu_count": 16,
+    "total_gib": 15.77,
+    "available_gib": 3.26
+  },
+  "ingest_integrity": {
+    "checked": [
+      {
+        "source_row": 0,
+        "matches_csv_line": true
+      },
+      {
+        "source_row": 1,
+        "matches_csv_line": true
+      },
+      {
+        "source_row": 1000000,
+        "matches_csv_line": true
+      },
+      {
+        "source_row": 3181310,
+        "matches_csv_line": true
+      },
+      {
+        "source_row": 6362619,
+        "matches_csv_line": true
+      }
+    ],
+    "passed": true
+  },
+  "raw_text_checks": {
+    "amount_unparseable": 0,
+    "amount_nan_inf_text": 0,
+    "amount_max_decimals": 2,
+    "amount_scientific_notation": 5650,
+    "oldbalanceOrg_unparseable": 0,
+    "oldbalanceOrg_nan_inf_text": 0,
+    "oldbalanceOrg_max_decimals": 2,
+    "oldbalanceOrg_scientific_notation": 140970,
+    "newbalanceOrig_unparseable": 0,
+    "newbalanceOrig_nan_inf_text": 0,
+    "newbalanceOrig_max_decimals": 2,
+    "newbalanceOrig_scientific_notation": 145092,
+    "oldbalanceDest_unparseable": 0,
+    "oldbalanceDest_nan_inf_text": 0,
+    "oldbalanceDest_max_decimals": 2,
+    "oldbalanceDest_scientific_notation": 107345,
+    "newbalanceDest_unparseable": 0,
+    "newbalanceDest_nan_inf_text": 0,
+    "newbalanceDest_max_decimals": 2,
+    "newbalanceDest_scientific_notation": 118988,
+    "step_not_integer": 0,
+    "isFraud_outside_01": 0,
+    "isFlaggedFraud_outside_01": 0,
+    "empty_strings": 0,
+    "rows": 6362620
+  },
+  "typed_checks": {
+    "amount_nan": 0,
+    "amount_inf": 0,
+    "amount_null": 0,
+    "amount_negative": 0,
+    "amount_zero": 16,
+    "oldbalanceOrg_nan": 0,
+    "oldbalanceOrg_inf": 0,
+    "oldbalanceOrg_null": 0,
+    "oldbalanceOrg_negative": 0,
+    "oldbalanceOrg_zero": 2102449,
+    "newbalanceOrig_nan": 0,
+    "newbalanceOrig_inf": 0,
+    "newbalanceOrig_null": 0,
+    "newbalanceOrig_negative": 0,
+    "newbalanceOrig_zero": 3609566,
+    "oldbalanceDest_nan": 0,
+    "oldbalanceDest_inf": 0,
+    "oldbalanceDest_null": 0,
+    "oldbalanceDest_negative": 0,
+    "oldbalanceDest_zero": 2704388,
+    "newbalanceDest_nan": 0,
+    "newbalanceDest_inf": 0,
+    "newbalanceDest_null": 0,
+    "newbalanceDest_negative": 0,
+    "newbalanceDest_zero": 2439433,
+    "type_out_of_domain": 0,
+    "step_out_of_range": 0,
+    "min_step": 1,
+    "max_step": 743,
+    "observed_steps": 743,
+    "nameOrig_bad_format": 0,
+    "nameDest_bad_format": 0,
+    "self_transfer_rows": 0,
+    "positives": 8213,
+    "policy_flagged": 16,
+    "flagged_and_positive": 16,
+    "flagged_and_negative": 0,
+    "max_source_row": 6362619,
+    "distinct_source_rows": 6362620,
+    "rows": 6362620,
+    "zero_amount_by_type_and_class": [
+      {
+        "type": "CASH_OUT",
+        "isFraud": 1,
+        "rows": 16
+      }
+    ],
+    "name_prefix_by_role_and_type": [
+      {
+        "type": "CASH_IN",
+        "orig_prefix": "C",
+        "dest_prefix": "C",
+        "rows": 1399284,
+        "positives": 0
+      },
+      {
+        "type": "CASH_OUT",
+        "orig_prefix": "C",
+        "dest_prefix": "C",
+        "rows": 2237500,
+        "positives": 4116
+      },
+      {
+        "type": "DEBIT",
+        "orig_prefix": "C",
+        "dest_prefix": "C",
+        "rows": 41432,
+        "positives": 0
+      },
+      {
+        "type": "PAYMENT",
+        "orig_prefix": "C",
+        "dest_prefix": "M",
+        "rows": 2151495,
+        "positives": 0
+      },
+      {
+        "type": "TRANSFER",
+        "orig_prefix": "C",
+        "dest_prefix": "C",
+        "rows": 532909,
+        "positives": 4097
+      }
+    ],
+    "amount_quantiles_by_type": [
+      {
+        "type": "CASH_IN",
+        "min": 0.04,
+        "median": 143427.71000000002,
+        "p99": 550870.8624999999,
+        "max": 1915267.9
+      },
+      {
+        "type": "CASH_OUT",
+        "min": 0.0,
+        "median": 147072.185,
+        "p99": 579654.072599998,
+        "max": 10000000.0
+      },
+      {
+        "type": "DEBIT",
+        "min": 0.55,
+        "median": 3048.99,
+        "p99": 50817.98380000013,
+        "max": 569077.51
+      },
+      {
+        "type": "PAYMENT",
+        "min": 0.02,
+        "median": 9482.19,
+        "p99": 59500.1066,
+        "max": 238637.98
+      },
+      {
+        "type": "TRANSFER",
+        "min": 2.6,
+        "median": 486308.39,
+        "p99": 10000000.0,
+        "max": 92445516.64
+      }
+    ]
+  },
+  "duplicates": {
+    "exact_all_columns": {
+      "duplicate_groups": 0,
+      "rows_in_groups": 0,
+      "surplus_rows": 0,
+      "max_group_size": 0
+    },
+    "same_non_label_values_different_label": {
+      "groups_with_conflicting_labels": 0
+    },
+    "same_step_type_amount_sender_recipient": {
+      "duplicate_groups": 0,
+      "rows_in_groups": 0,
+      "positives_in_groups": 0
+    },
+    "key_duplicate_examples": [],
+    "positive_transfer_cashout_pairing": {
+      "positive_transfers": 4097,
+      "positive_cash_outs": 4116,
+      "same_step_same_amount_pairs": 4272,
+      "transfer_dest_equals_cashout_orig": 0
+    }
+  },
+  "partition_support": {
+    "by_partition": [
+      {
+        "partition": "train",
+        "first_step": 1,
+        "last_step": 281,
+        "observed_hours": 281,
+        "rows": 3820599,
+        "positives": 3193,
+        "prevalence": 0.000835732826187726,
+        "policy_flagged": 3,
+        "days_touched": 12
+      },
+      {
+        "partition": "validation",
+        "first_step": 282,
+        "last_step": 355,
+        "observed_hours": 74,
+        "rows": 1293285,
+        "positives": 770,
+        "prevalence": 0.0005953830748829531,
+        "policy_flagged": 0,
+        "days_touched": 4
+      },
+      {
+        "partition": "test",
+        "first_step": 356,
+        "last_step": 743,
+        "observed_hours": 388,
+        "rows": 1248736,
+        "positives": 4250,
+        "prevalence": 0.0034034415601055788,
+        "policy_flagged": 13,
+        "days_touched": 17
+      }
+    ],
+    "by_partition_type": [
+      {
+        "partition": "train",
+        "type": "CASH_IN",
+        "rows": 837044,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "train",
+        "type": "CASH_OUT",
+        "rows": 1357358,
+        "positives": 1606,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "train",
+        "type": "DEBIT",
+        "rows": 23489,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "train",
+        "type": "PAYMENT",
+        "rows": 1287159,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "train",
+        "type": "TRANSFER",
+        "rows": 315549,
+        "positives": 1587,
+        "policy_flagged": 3
+      },
+      {
+        "partition": "validation",
+        "type": "CASH_IN",
+        "rows": 285430,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "validation",
+        "type": "CASH_OUT",
+        "rows": 456641,
+        "positives": 385,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "validation",
+        "type": "DEBIT",
+        "rows": 9044,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "validation",
+        "type": "PAYMENT",
+        "rows": 433249,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "validation",
+        "type": "TRANSFER",
+        "rows": 108921,
+        "positives": 385,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "test",
+        "type": "CASH_IN",
+        "rows": 276810,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "test",
+        "type": "CASH_OUT",
+        "rows": 423501,
+        "positives": 2125,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "test",
+        "type": "DEBIT",
+        "rows": 8899,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "test",
+        "type": "PAYMENT",
+        "rows": 431087,
+        "positives": 0,
+        "policy_flagged": 0
+      },
+      {
+        "partition": "test",
+        "type": "TRANSFER",
+        "rows": 108439,
+        "positives": 2125,
+        "policy_flagged": 13
+      }
+    ],
+    "partition_day_segments": [
+      {
+        "partition": "train",
+        "day": 0,
+        "first_step": 1,
+        "last_step": 24,
+        "observed_hours": 24,
+        "rows": 574255,
+        "positives": 271
+      },
+      {
+        "partition": "train",
+        "day": 1,
+        "first_step": 25,
+        "last_step": 48,
+        "observed_hours": 24,
+        "rows": 455238,
+        "positives": 309
+      },
+      {
+        "partition": "train",
+        "day": 2,
+        "first_step": 49,
+        "last_step": 72,
+        "observed_hours": 24,
+        "rows": 1070,
+        "positives": 310
+      },
+      {
+        "partition": "train",
+        "day": 3,
+        "first_step": 73,
+        "last_step": 96,
+        "observed_hours": 24,
+        "rows": 28240,
+        "positives": 262
+      },
+      {
+        "partition": "train",
+        "day": 4,
+        "first_step": 97,
+        "last_step": 120,
+        "observed_hours": 24,
+        "rows": 9789,
+        "positives": 252
+      },
+      {
+        "partition": "train",
+        "day": 5,
+        "first_step": 121,
+        "last_step": 144,
+        "observed_hours": 24,
+        "rows": 441005,
+        "positives": 228
+      },
+      {
+        "partition": "train",
+        "day": 6,
+        "first_step": 145,
+        "last_step": 168,
+        "observed_hours": 24,
+        "rows": 420583,
+        "positives": 272
+      },
+      {
+        "partition": "train",
+        "day": 7,
+        "first_step": 169,
+        "last_step": 192,
+        "observed_hours": 24,
+        "rows": 449637,
+        "positives": 278
+      },
+      {
+        "partition": "train",
+        "day": 8,
+        "first_step": 193,
+        "last_step": 216,
+        "observed_hours": 24,
+        "rows": 417919,
+        "positives": 255
+      },
+      {
+        "partition": "train",
+        "day": 9,
+        "first_step": 217,
+        "last_step": 240,
+        "observed_hours": 24,
+        "rows": 392945,
+        "positives": 282
+      },
+      {
+        "partition": "train",
+        "day": 10,
+        "first_step": 241,
+        "last_step": 264,
+        "observed_hours": 24,
+        "rows": 417859,
+        "positives": 262
+      },
+      {
+        "partition": "train",
+        "day": 11,
+        "first_step": 265,
+        "last_step": 281,
+        "observed_hours": 17,
+        "rows": 212059,
+        "positives": 212
+      },
+      {
+        "partition": "validation",
+        "day": 11,
+        "first_step": 282,
+        "last_step": 288,
+        "observed_hours": 7,
+        "rows": 137717,
+        "positives": 86
+      },
+      {
+        "partition": "validation",
+        "day": 12,
+        "first_step": 289,
+        "last_step": 312,
+        "observed_hours": 24,
+        "rows": 428583,
+        "positives": 242
+      },
+      {
+        "partition": "validation",
+        "day": 13,
+        "first_step": 313,
+        "last_step": 336,
+        "observed_hours": 24,
+        "rows": 397876,
+        "positives": 246
+      },
+      {
+        "partition": "validation",
+        "day": 14,
+        "first_step": 337,
+        "last_step": 355,
+        "observed_hours": 19,
+        "rows": 329109,
+        "positives": 196
+      },
+      {
+        "partition": "test",
+        "day": 14,
+        "first_step": 356,
+        "last_step": 360,
+        "observed_hours": 5,
+        "rows": 72173,
+        "positives": 54
+      },
+      {
+        "partition": "test",
+        "day": 15,
+        "first_step": 361,
+        "last_step": 384,
+        "observed_hours": 24,
+        "rows": 375594,
+        "positives": 252
+      },
+      {
+        "partition": "test",
+        "day": 16,
+        "first_step": 385,
+        "last_step": 408,
+        "observed_hours": 24,
+        "rows": 425766,
+        "positives": 320
+      },
+      {
+        "partition": "test",
+        "day": 17,
+        "first_step": 409,
+        "last_step": 432,
+        "observed_hours": 24,
+        "rows": 20999,
+        "positives": 268
+      },
+      {
+        "partition": "test",
+        "day": 18,
+        "first_step": 433,
+        "last_step": 456,
+        "observed_hours": 24,
+        "rows": 11300,
+        "positives": 256
+      },
+      {
+        "partition": "test",
+        "day": 19,
+        "first_step": 457,
+        "last_step": 480,
+        "observed_hours": 24,
+        "rows": 19727,
+        "positives": 236
+      },
+      {
+        "partition": "test",
+        "day": 20,
+        "first_step": 481,
+        "last_step": 504,
+        "observed_hours": 24,
+        "rows": 24593,
+        "positives": 272
+      },
+      {
+        "partition": "test",
+        "day": 21,
+        "first_step": 505,
+        "last_step": 528,
+        "observed_hours": 24,
+        "rows": 53437,
+        "positives": 256
+      },
+      {
+        "partition": "test",
+        "day": 22,
+        "first_step": 529,
+        "last_step": 552,
+        "observed_hours": 24,
+        "rows": 51012,
+        "positives": 216
+      },
+      {
+        "partition": "test",
+        "day": 23,
+        "first_step": 553,
+        "last_step": 576,
+        "observed_hours": 24,
+        "rows": 32709,
+        "positives": 280
+      },
+      {
+        "partition": "test",
+        "day": 24,
+        "first_step": 577,
+        "last_step": 600,
+        "observed_hours": 24,
+        "rows": 57853,
+        "positives": 240
+      },
+      {
+        "partition": "test",
+        "day": 25,
+        "first_step": 601,
+        "last_step": 624,
+        "observed_hours": 24,
+        "rows": 13885,
+        "positives": 272
+      },
+      {
+        "partition": "test",
+        "day": 26,
+        "first_step": 625,
+        "last_step": 648,
+        "observed_hours": 24,
+        "rows": 8578,
+        "positives": 280
+      },
+      {
+        "partition": "test",
+        "day": 27,
+        "first_step": 649,
+        "last_step": 672,
+        "observed_hours": 24,
+        "rows": 14661,
+        "positives": 248
+      },
+      {
+        "partition": "test",
+        "day": 28,
+        "first_step": 673,
+        "last_step": 696,
+        "observed_hours": 24,
+        "rows": 54890,
+        "positives": 260
+      },
+      {
+        "partition": "test",
+        "day": 29,
+        "first_step": 697,
+        "last_step": 720,
+        "observed_hours": 24,
+        "rows": 11287,
+        "positives": 268
+      },
+      {
+        "partition": "test",
+        "day": 30,
+        "first_step": 721,
+        "last_step": 743,
+        "observed_hours": 23,
+        "rows": 272,
+        "positives": 272
+      }
+    ]
+  },
+  "recipient_history": {
+    "definition": "same nameDest in recipient role at a strictly earlier step; 24h = steps s-24..s-1; same-step rows never count",
+    "overall": {
+      "rows": 6362620,
+      "with_prior": 3592717,
+      "with_prior_24h": 2354216
+    },
+    "by_partition_label": [
+      {
+        "partition": "train",
+        "label": 0,
+        "rows": 3817406,
+        "with_prior_fraction": 0.5622063778387733,
+        "with_prior_24h_fraction": 0.4491002528942428
+      },
+      {
+        "partition": "train",
+        "label": 1,
+        "rows": 3193,
+        "with_prior_fraction": 0.3651738177262762,
+        "with_prior_24h_fraction": 0.22925148762918884
+      },
+      {
+        "partition": "validation",
+        "label": 0,
+        "rows": 1292515,
+        "with_prior_fraction": 0.5736575590998944,
+        "with_prior_24h_fraction": 0.30800184137128
+      },
+      {
+        "partition": "validation",
+        "label": 1,
+        "rows": 770,
+        "with_prior_fraction": 0.37272727272727274,
+        "with_prior_24h_fraction": 0.18311688311688312
+      },
+      {
+        "partition": "test",
+        "label": 0,
+        "rows": 1244486,
+        "with_prior_fraction": 0.564143750914032,
+        "with_prior_24h_fraction": 0.19340514879235282
+      },
+      {
+        "partition": "test",
+        "label": 1,
+        "rows": 4250,
+        "with_prior_fraction": 0.368,
+        "with_prior_24h_fraction": 0.0371764705882353
+      }
+    ],
+    "by_partition_type_label": [
+      {
+        "partition": "train",
+        "type": "CASH_IN",
+        "label": 0,
+        "rows": 837044,
+        "with_prior": 716396,
+        "with_prior_fraction": 0.8558642078552621,
+        "with_prior_24h_fraction": 0.6831480782372252,
+        "same_step_only_recurrence": 20720,
+        "prior_1": 91552,
+        "prior_2_4": 199191,
+        "prior_5_9": 191225,
+        "prior_10_plus": 234428,
+        "dest_seen_earlier_as_sender": 776
+      },
+      {
+        "partition": "train",
+        "type": "CASH_OUT",
+        "label": 0,
+        "rows": 1355752,
+        "with_prior": 1135820,
+        "with_prior_fraction": 0.837778590774714,
+        "with_prior_24h_fraction": 0.6676213643793261,
+        "same_step_only_recurrence": 43013,
+        "prior_1": 152597,
+        "prior_2_4": 320069,
+        "prior_5_9": 300306,
+        "prior_10_plus": 362848,
+        "dest_seen_earlier_as_sender": 1239
+      },
+      {
+        "partition": "train",
+        "type": "CASH_OUT",
+        "label": 1,
+        "rows": 1606,
+        "with_prior": 1162,
+        "with_prior_fraction": 0.7235367372353674,
+        "with_prior_24h_fraction": 0.4533001245330012,
+        "same_step_only_recurrence": 53,
+        "prior_1": 212,
+        "prior_2_4": 391,
+        "prior_5_9": 269,
+        "prior_10_plus": 290,
+        "dest_seen_earlier_as_sender": 0
+      },
+      {
+        "partition": "train",
+        "type": "DEBIT",
+        "label": 0,
+        "rows": 23489,
+        "with_prior": 20453,
+        "with_prior_fraction": 0.8707480097066712,
+        "with_prior_24h_fraction": 0.689258801992422,
+        "same_step_only_recurrence": 845,
+        "prior_1": 2821,
+        "prior_2_4": 6183,
+        "prior_5_9": 5402,
+        "prior_10_plus": 6047,
+        "dest_seen_earlier_as_sender": 21
+      },
+      {
+        "partition": "train",
+        "type": "PAYMENT",
+        "label": 0,
+        "rows": 1287159,
+        "with_prior": 374,
+        "with_prior_fraction": 0.0002905623936125995,
+        "with_prior_24h_fraction": 5.593714529440419e-05,
+        "same_step_only_recurrence": 4,
+        "prior_1": 374,
+        "prior_2_4": 0,
+        "prior_5_9": 0,
+        "prior_10_plus": 0,
+        "dest_seen_earlier_as_sender": 0
+      },
+      {
+        "partition": "train",
+        "type": "TRANSFER",
+        "label": 0,
+        "rows": 313962,
+        "with_prior": 273127,
+        "with_prior_fraction": 0.8699364891292577,
+        "with_prior_24h_fraction": 0.7044865302170327,
+        "same_step_only_recurrence": 9097,
+        "prior_1": 27295,
+        "prior_2_4": 61817,
+        "prior_5_9": 71114,
+        "prior_10_plus": 112901,
+        "dest_seen_earlier_as_sender": 274
+      },
+      {
+        "partition": "train",
+        "type": "TRANSFER",
+        "label": 1,
+        "rows": 1587,
+        "with_prior": 4,
+        "with_prior_fraction": 0.002520478890989288,
+        "with_prior_24h_fraction": 0.002520478890989288,
+        "same_step_only_recurrence": 32,
+        "prior_1": 1,
+        "prior_2_4": 1,
+        "prior_5_9": 1,
+        "prior_10_plus": 1,
+        "dest_seen_earlier_as_sender": 0
+      },
+      {
+        "partition": "validation",
+        "type": "CASH_IN",
+        "label": 0,
+        "rows": 285430,
+        "with_prior": 248747,
+        "with_prior_fraction": 0.871481624216095,
+        "with_prior_24h_fraction": 0.46853168903058545,
+        "same_step_only_recurrence": 1140,
+        "prior_1": 30642,
+        "prior_2_4": 67316,
+        "prior_5_9": 65729,
+        "prior_10_plus": 85060,
+        "dest_seen_earlier_as_sender": 644
+      },
+      {
+        "partition": "validation",
+        "type": "CASH_OUT",
+        "label": 0,
+        "rows": 456256,
+        "with_prior": 388740,
+        "with_prior_fraction": 0.8520216720437649,
+        "with_prior_24h_fraction": 0.4515600890728012,
+        "same_step_only_recurrence": 2475,
+        "prior_1": 51152,
+        "prior_2_4": 107432,
+        "prior_5_9": 101336,
+        "prior_10_plus": 128820,
+        "dest_seen_earlier_as_sender": 1029
+      },
+      {
+        "partition": "validation",
+        "type": "CASH_OUT",
+        "label": 1,
+        "rows": 385,
+        "with_prior": 287,
+        "with_prior_fraction": 0.7454545454545455,
+        "with_prior_24h_fraction": 0.36623376623376624,
+        "same_step_only_recurrence": 4,
+        "prior_1": 54,
+        "prior_2_4": 85,
+        "prior_5_9": 65,
+        "prior_10_plus": 83,
+        "dest_seen_earlier_as_sender": 0
+      },
+      {
+        "partition": "validation",
+        "type": "DEBIT",
+        "label": 0,
+        "rows": 9044,
+        "with_prior": 8344,
+        "with_prior_fraction": 0.9226006191950464,
+        "with_prior_24h_fraction": 0.47346306943830163,
+        "same_step_only_recurrence": 34,
+        "prior_1": 1145,
+        "prior_2_4": 2532,
+        "prior_5_9": 2175,
+        "prior_10_plus": 2492,
+        "dest_seen_earlier_as_sender": 14
+      },
+      {
+        "partition": "validation",
+        "type": "PAYMENT",
+        "label": 0,
+        "rows": 433249,
+        "with_prior": 343,
+        "with_prior_fraction": 0.0007916925370860636,
+        "with_prior_24h_fraction": 5.308725467340952e-05,
+        "same_step_only_recurrence": 2,
+        "prior_1": 343,
+        "prior_2_4": 0,
+        "prior_5_9": 0,
+        "prior_10_plus": 0,
+        "dest_seen_earlier_as_sender": 0
+      },
+      {
+        "partition": "validation",
+        "type": "TRANSFER",
+        "label": 0,
+        "rows": 108536,
+        "with_prior": 95287,
+        "with_prior_fraction": 0.8779299034421759,
+        "with_prior_24h_fraction": 0.4978256062504607,
+        "same_step_only_recurrence": 1852,
+        "prior_1": 8896,
+        "prior_2_4": 19924,
+        "prior_5_9": 22295,
+        "prior_10_plus": 44172,
+        "dest_seen_earlier_as_sender": 245
+      },
+      {
+        "partition": "validation",
+        "type": "TRANSFER",
+        "label": 1,
+        "rows": 385,
+        "with_prior": 0,
+        "with_prior_fraction": 0.0,
+        "with_prior_24h_fraction": 0.0,
+        "same_step_only_recurrence": 1,
+        "prior_1": 0,
+        "prior_2_4": 0,
+        "prior_5_9": 0,
+        "prior_10_plus": 0,
+        "dest_seen_earlier_as_sender": 2
+      },
+      {
+        "partition": "test",
+        "type": "CASH_IN",
+        "label": 0,
+        "rows": 276810,
+        "with_prior": 241762,
+        "with_prior_fraction": 0.8733860770925906,
+        "with_prior_24h_fraction": 0.29354430837036233,
+        "same_step_only_recurrence": 610,
+        "prior_1": 30195,
+        "prior_2_4": 65973,
+        "prior_5_9": 63141,
+        "prior_10_plus": 82453,
+        "dest_seen_earlier_as_sender": 803
+      },
+      {
+        "partition": "test",
+        "type": "CASH_OUT",
+        "label": 0,
+        "rows": 421376,
+        "with_prior": 357720,
+        "with_prior_fraction": 0.8489330194410692,
+        "with_prior_24h_fraction": 0.294404522326853,
+        "same_step_only_recurrence": 1315,
+        "prior_1": 48417,
+        "prior_2_4": 100446,
+        "prior_5_9": 92147,
+        "prior_10_plus": 116710,
+        "dest_seen_earlier_as_sender": 1215
+      },
+      {
+        "partition": "test",
+        "type": "CASH_OUT",
+        "label": 1,
+        "rows": 2125,
+        "with_prior": 1564,
+        "with_prior_fraction": 0.736,
+        "with_prior_24h_fraction": 0.0743529411764706,
+        "same_step_only_recurrence": 2,
+        "prior_1": 298,
+        "prior_2_4": 498,
+        "prior_5_9": 376,
+        "prior_10_plus": 392,
+        "dest_seen_earlier_as_sender": 3
+      },
+      {
+        "partition": "test",
+        "type": "DEBIT",
+        "label": 0,
+        "rows": 8899,
+        "with_prior": 8162,
+        "with_prior_fraction": 0.9171817058096415,
+        "with_prior_24h_fraction": 0.2916057984043151,
+        "same_step_only_recurrence": 11,
+        "prior_1": 1152,
+        "prior_2_4": 2427,
+        "prior_5_9": 2083,
+        "prior_10_plus": 2500,
+        "dest_seen_earlier_as_sender": 23
+      },
+      {
+        "partition": "test",
+        "type": "PAYMENT",
+        "label": 0,
+        "rows": 431087,
+        "with_prior": 373,
+        "with_prior_fraction": 0.0008652545773822917,
+        "with_prior_24h_fraction": 4.639434731272342e-05,
+        "same_step_only_recurrence": 2,
+        "prior_1": 372,
+        "prior_2_4": 1,
+        "prior_5_9": 0,
+        "prior_10_plus": 0,
+        "dest_seen_earlier_as_sender": 0
+      },
+      {
+        "partition": "test",
+        "type": "TRANSFER",
+        "label": 0,
+        "rows": 106314,
+        "with_prior": 94052,
+        "with_prior_fraction": 0.8846624151099572,
+        "with_prior_24h_fraction": 0.3081814248358636,
+        "same_step_only_recurrence": 325,
+        "prior_1": 9118,
+        "prior_2_4": 20967,
+        "prior_5_9": 23071,
+        "prior_10_plus": 40896,
+        "dest_seen_earlier_as_sender": 295
+      },
+      {
+        "partition": "test",
+        "type": "TRANSFER",
+        "label": 1,
+        "rows": 2125,
+        "with_prior": 0,
+        "with_prior_fraction": 0.0,
+        "with_prior_24h_fraction": 0.0,
+        "same_step_only_recurrence": 1,
+        "prior_1": 0,
+        "prior_2_4": 0,
+        "prior_5_9": 0,
+        "prior_10_plus": 0,
+        "dest_seen_earlier_as_sender": 5
+      }
+    ],
+    "sender_history_by_partition": [
+      {
+        "partition": "train",
+        "rows": 3820599,
+        "with_prior": 3388,
+        "with_prior_fraction": 0.0008867719433523383,
+        "positives_with_prior": 3
+      },
+      {
+        "partition": "validation",
+        "rows": 1293285,
+        "with_prior": 2687,
+        "with_prior_fraction": 0.0020776549639097337,
+        "positives_with_prior": 3
+      },
+      {
+        "partition": "test",
+        "rows": 1248736,
+        "with_prior": 3191,
+        "with_prior_fraction": 0.0025553840043051534,
+        "positives_with_prior": 12
+      }
+    ]
+  },
+  "history_crosscheck": {
+    "steps": "1-48",
+    "rows": 1029493,
+    "mismatch_prior_count": 0,
+    "mismatch_prior_24h": 0,
+    "passed": true
+  },
+  "pure_positive_hours": {
+    "by_partition": [
+      {
+        "partition": "train",
+        "observed_hours": 281,
+        "pure_positive_hours": 108,
+        "positives_in_pure_hours": 1174,
+        "mixed_hours": 173,
+        "positives_in_mixed_hours": 2019,
+        "rows_in_mixed_hours": 3819425,
+        "zero_positive_hours": 0,
+        "rows_in_zero_positive_hours": 0,
+        "positives": 3193
+      },
+      {
+        "partition": "validation",
+        "observed_hours": 74,
+        "pure_positive_hours": 17,
+        "positives_in_pure_hours": 196,
+        "mixed_hours": 56,
+        "positives_in_mixed_hours": 574,
+        "rows_in_mixed_hours": 1262867,
+        "zero_positive_hours": 1,
+        "rows_in_zero_positive_hours": 30222,
+        "positives": 770
+      },
+      {
+        "partition": "test",
+        "observed_hours": 388,
+        "pure_positive_hours": 195,
+        "positives_in_pure_hours": 2250,
+        "mixed_hours": 192,
+        "positives_in_mixed_hours": 2000,
+        "rows_in_mixed_hours": 1242924,
+        "zero_positive_hours": 1,
+        "rows_in_zero_positive_hours": 3562,
+        "positives": 4250
+      }
+    ],
+    "pure_hour_row_counts": [
+      {
+        "partition": "train",
+        "min_rows": 2,
+        "median_rows": 10.0,
+        "max_rows": 24
+      },
+      {
+        "partition": "validation",
+        "min_rows": 4,
+        "median_rows": 10.0,
+        "max_rows": 22
+      },
+      {
+        "partition": "test",
+        "min_rows": 2,
+        "median_rows": 10.0,
+        "max_rows": 30
+      }
+    ],
+    "by_hour_of_day": [
+      {
+        "hour_of_day": 0,
+        "observed_hours": 31,
+        "pure_positive_hours": 8,
+        "rows": 27111,
+        "positives": 358
+      },
+      {
+        "hour_of_day": 1,
+        "observed_hours": 31,
+        "pure_positive_hours": 14,
+        "rows": 9018,
+        "positives": 372
+      },
+      {
+        "hour_of_day": 2,
+        "observed_hours": 31,
+        "pure_positive_hours": 19,
+        "rows": 2007,
+        "positives": 326
+      },
+      {
+        "hour_of_day": 3,
+        "observed_hours": 31,
+        "pure_positive_hours": 26,
+        "rows": 1241,
+        "positives": 274
+      },
+      {
+        "hour_of_day": 4,
+        "observed_hours": 31,
+        "pure_positive_hours": 27,
+        "rows": 1641,
+        "positives": 366
+      },
+      {
+        "hour_of_day": 5,
+        "observed_hours": 31,
+        "pure_positive_hours": 27,
+        "rows": 3420,
+        "positives": 358
+      },
+      {
+        "hour_of_day": 6,
+        "observed_hours": 31,
+        "pure_positive_hours": 27,
+        "rows": 8988,
+        "positives": 328
+      },
+      {
+        "hour_of_day": 7,
+        "observed_hours": 31,
+        "pure_positive_hours": 26,
+        "rows": 26915,
+        "positives": 368
+      },
+      {
+        "hour_of_day": 8,
+        "observed_hours": 31,
+        "pure_positive_hours": 14,
+        "rows": 283518,
+        "positives": 341
+      },
+      {
+        "hour_of_day": 9,
+        "observed_hours": 31,
+        "pure_positive_hours": 10,
+        "rows": 425729,
+        "positives": 375
+      },
+      {
+        "hour_of_day": 10,
+        "observed_hours": 31,
+        "pure_positive_hours": 11,
+        "rows": 445992,
+        "positives": 324
+      },
+      {
+        "hour_of_day": 11,
+        "observed_hours": 31,
+        "pure_positive_hours": 10,
+        "rows": 483418,
+        "positives": 339
+      },
+      {
+        "hour_of_day": 12,
+        "observed_hours": 31,
+        "pure_positive_hours": 7,
+        "rows": 468474,
+        "positives": 346
+      },
+      {
+        "hour_of_day": 13,
+        "observed_hours": 31,
+        "pure_positive_hours": 9,
+        "rows": 439653,
+        "positives": 353
+      },
+      {
+        "hour_of_day": 14,
+        "observed_hours": 31,
+        "pure_positive_hours": 11,
+        "rows": 416686,
+        "positives": 341
+      },
+      {
+        "hour_of_day": 15,
+        "observed_hours": 31,
+        "pure_positive_hours": 7,
+        "rows": 441612,
+        "positives": 345
+      },
+      {
+        "hour_of_day": 16,
+        "observed_hours": 31,
+        "pure_positive_hours": 13,
+        "rows": 439941,
+        "positives": 353
+      },
+      {
+        "hour_of_day": 17,
+        "observed_hours": 31,
+        "pure_positive_hours": 8,
+        "rows": 580509,
+        "positives": 343
+      },
+      {
+        "hour_of_day": 18,
+        "observed_hours": 31,
+        "pure_positive_hours": 9,
+        "rows": 647814,
+        "positives": 342
+      },
+      {
+        "hour_of_day": 19,
+        "observed_hours": 31,
+        "pure_positive_hours": 7,
+        "rows": 553728,
+        "positives": 340
+      },
+      {
+        "hour_of_day": 20,
+        "observed_hours": 31,
+        "pure_positive_hours": 7,
+        "rows": 247806,
+        "positives": 347
+      },
+      {
+        "hour_of_day": 21,
+        "observed_hours": 31,
+        "pure_positive_hours": 6,
+        "rows": 194555,
+        "positives": 351
+      },
+      {
+        "hour_of_day": 22,
+        "observed_hours": 31,
+        "pure_positive_hours": 7,
+        "rows": 141257,
+        "positives": 323
+      },
+      {
+        "hour_of_day": 23,
+        "observed_hours": 30,
+        "pure_positive_hours": 10,
+        "rows": 71587,
+        "positives": 300
+      }
+    ],
+    "by_day": [
+      {
+        "day": 0,
+        "observed_hours": 24,
+        "pure_positive_hours": 0,
+        "rows": 574255,
+        "positives": 271
+      },
+      {
+        "day": 1,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 455238,
+        "positives": 309
+      },
+      {
+        "day": 2,
+        "observed_hours": 24,
+        "pure_positive_hours": 23,
+        "rows": 1070,
+        "positives": 310
+      },
+      {
+        "day": 3,
+        "observed_hours": 24,
+        "pure_positive_hours": 20,
+        "rows": 28240,
+        "positives": 262
+      },
+      {
+        "day": 4,
+        "observed_hours": 24,
+        "pure_positive_hours": 21,
+        "rows": 9789,
+        "positives": 252
+      },
+      {
+        "day": 5,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 441005,
+        "positives": 228
+      },
+      {
+        "day": 6,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 420583,
+        "positives": 272
+      },
+      {
+        "day": 7,
+        "observed_hours": 24,
+        "pure_positive_hours": 6,
+        "rows": 449637,
+        "positives": 278
+      },
+      {
+        "day": 8,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 417919,
+        "positives": 255
+      },
+      {
+        "day": 9,
+        "observed_hours": 24,
+        "pure_positive_hours": 7,
+        "rows": 392945,
+        "positives": 282
+      },
+      {
+        "day": 10,
+        "observed_hours": 24,
+        "pure_positive_hours": 6,
+        "rows": 417859,
+        "positives": 262
+      },
+      {
+        "day": 11,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 349776,
+        "positives": 298
+      },
+      {
+        "day": 12,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 428583,
+        "positives": 242
+      },
+      {
+        "day": 13,
+        "observed_hours": 24,
+        "pure_positive_hours": 6,
+        "rows": 397876,
+        "positives": 246
+      },
+      {
+        "day": 14,
+        "observed_hours": 24,
+        "pure_positive_hours": 6,
+        "rows": 401282,
+        "positives": 250
+      },
+      {
+        "day": 15,
+        "observed_hours": 24,
+        "pure_positive_hours": 6,
+        "rows": 375594,
+        "positives": 252
+      },
+      {
+        "day": 16,
+        "observed_hours": 24,
+        "pure_positive_hours": 6,
+        "rows": 425766,
+        "positives": 320
+      },
+      {
+        "day": 17,
+        "observed_hours": 24,
+        "pure_positive_hours": 13,
+        "rows": 20999,
+        "positives": 268
+      },
+      {
+        "day": 18,
+        "observed_hours": 24,
+        "pure_positive_hours": 13,
+        "rows": 11300,
+        "positives": 256
+      },
+      {
+        "day": 19,
+        "observed_hours": 24,
+        "pure_positive_hours": 13,
+        "rows": 19727,
+        "positives": 236
+      },
+      {
+        "day": 20,
+        "observed_hours": 24,
+        "pure_positive_hours": 14,
+        "rows": 24593,
+        "positives": 272
+      },
+      {
+        "day": 21,
+        "observed_hours": 24,
+        "pure_positive_hours": 12,
+        "rows": 53437,
+        "positives": 256
+      },
+      {
+        "day": 22,
+        "observed_hours": 24,
+        "pure_positive_hours": 7,
+        "rows": 51012,
+        "positives": 216
+      },
+      {
+        "day": 23,
+        "observed_hours": 24,
+        "pure_positive_hours": 12,
+        "rows": 32709,
+        "positives": 280
+      },
+      {
+        "day": 24,
+        "observed_hours": 24,
+        "pure_positive_hours": 5,
+        "rows": 57853,
+        "positives": 240
+      },
+      {
+        "day": 25,
+        "observed_hours": 24,
+        "pure_positive_hours": 15,
+        "rows": 13885,
+        "positives": 272
+      },
+      {
+        "day": 26,
+        "observed_hours": 24,
+        "pure_positive_hours": 19,
+        "rows": 8578,
+        "positives": 280
+      },
+      {
+        "day": 27,
+        "observed_hours": 24,
+        "pure_positive_hours": 15,
+        "rows": 14661,
+        "positives": 248
+      },
+      {
+        "day": 28,
+        "observed_hours": 24,
+        "pure_positive_hours": 10,
+        "rows": 54890,
+        "positives": 260
+      },
+      {
+        "day": 29,
+        "observed_hours": 24,
+        "pure_positive_hours": 12,
+        "rows": 11287,
+        "positives": 268
+      },
+      {
+        "day": 30,
+        "observed_hours": 23,
+        "pure_positive_hours": 23,
+        "rows": 272,
+        "positives": 272
+      }
+    ],
+    "scope": "evaluator-only diagnostic; never a feature, serving filter or assistant input"
+  },
+  "runtime": {
+    "sections_seconds": {
+      "ingest_integrity": 0.8,
+      "raw_text_checks": 3.56,
+      "typed_checks": 1.96,
+      "duplicates": 5.05,
+      "partition_support": 0.32,
+      "recipient_history": 7.08,
+      "history_crosscheck": 3.9,
+      "pure_positive_hours": 0.03
+    },
+    "total_seconds": 22.92,
+    "peak_python_process_mib": 1540.5,
+    "duckdb_memory_limit": "2GB",
+    "duckdb_threads": 4
+  }
+}

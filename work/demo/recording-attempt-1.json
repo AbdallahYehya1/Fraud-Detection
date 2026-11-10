@@ -1,0 +1,414 @@
+{
+  "recorded_date": "2026-11-10",
+  "actual_app_capture": true,
+  "audio": "none; captioned",
+  "model": "qwen3:4b",
+  "case_id": "demo-test-d14-16/test/d15/r012",
+  "chapter_marks": [
+    {
+      "start_seconds": 0.681,
+      "title": "1 / 7  •  FRAUD REVIEW WORKBENCH",
+      "detail": "Prioritize recorded transactions for human review. Synthetic PaySim v2; all services run locally."
+    },
+    {
+      "start_seconds": 14.691,
+      "title": "A REPRODUCIBLE MODEL AND REVIEW POLICY",
+      "detail": "Frozen features and model version. Top 100 reviews per simulation day; ranking scores are not probabilities."
+    },
+    {
+      "start_seconds": 31.739,
+      "title": "2 / 7  •  MEASURED OFFLINE RESULTS",
+      "detail": "Champion: 1,189 of 4,250 positives found at 100/day. The amount/type rule found 670."
+    },
+    {
+      "start_seconds": 45.753,
+      "title": "SIMULATOR LIMITATIONS STAY VISIBLE",
+      "detail": "Many hours contain only fraud-labelled rows. Mixed-hour hits: 505 of 2,000; no real-bank savings claim."
+    },
+    {
+      "start_seconds": 59.992,
+      "title": "3 / 7  •  A CAPACITY-LIMITED ANALYST QUEUE",
+      "detail": "Day 15: ranked alerts, simulation units and explicit missing-history indicators."
+    },
+    {
+      "start_seconds": 80.214,
+      "title": "4 / 7  •  EVIDENCE FOR THIS CASE",
+      "detail": "The case records its scoring step and review cutoff. Model associations are not proof of fraud."
+    },
+    {
+      "start_seconds": 99.242,
+      "title": "COMPUTED FACTS AND KNOWN GAPS",
+      "detail": "Source-linked facts are separated from missing device, identity and customer information."
+    },
+    {
+      "start_seconds": 117.359,
+      "title": "HISTORY AT SCORING VS. EVIDENCE AT REVIEW",
+      "detail": "A second case shows earlier recipient records and later review-time records in separate sections."
+    },
+    {
+      "start_seconds": 134.464,
+      "title": "5 / 7  •  LIVE LOCAL INVESTIGATION ASSISTANT",
+      "detail": "One case, read-only evidence tools and a fixed cutoff. This generation is shown in real time."
+    },
+    {
+      "start_seconds": 195.681,
+      "title": "CHECKED ANSWER, VISIBLE REFERENCES",
+      "detail": "The system-added scope line is distinct from model text. The assistant did not change the case."
+    },
+    {
+      "start_seconds": 219.716,
+      "title": "6 / 7  •  THE HUMAN MAKES THE DECISION",
+      "detail": "Start review, add an analyst note, and close with “needs more information.” No fraud label is asserted."
+    }
+  ],
+  "protected_report_hashes_before": {
+    "assistant_eval_holdout.json": "aacba83e2e1d6fc911cbfb50ff1f6af7cdad14065d003e0569c621c29ea64295",
+    "assistant_eval_v2_holdout.json": "8aa2548fe90849ea38fd8ade72bdda63d695c82566ff1e1ae474c57bbf4dc46d",
+    "assistant_freeze_v2.json": "5d821849097669677650db508477bedac886eeee524e92afa1a0d32a0a4f285b"
+  },
+  "evidence_before_assistant": {
+    "case": {
+      "case_id": "demo-test-d14-16/test/d15/r012",
+      "run_id": "demo-test-d14-16",
+      "status": "new",
+      "disposition": null,
+      "version": 1,
+      "assigned_to": null,
+      "scoring_step": 383,
+      "case_evidence_cutoff_step": 384,
+      "created_at": "2026-11-09T22:02:33.416840Z",
+      "updated_at": "2026-11-09T22:02:33.416840Z"
+    },
+    "transaction": {
+      "event_id": "PS2-16910f90-5555665",
+      "source_row": 5555665,
+      "step": 383,
+      "type": "CASH_OUT",
+      "amount": "4731371.88",
+      "name_orig": "C1671601365",
+      "name_dest": "C66224368",
+      "unit": "simulation currency units"
+    },
+    "model_evidence": {
+      "score": 0.9994449755786162,
+      "rank": 12,
+      "capacity": 100,
+      "simulation_day": 15,
+      "partition": "test",
+      "model_version": "champion-v1",
+      "feature_contract": "features-v1",
+      "policy_version": "policy-v1",
+      "feature_sha256": "2214a9f8f861730b6c1a90eca9866c567836aa10c6422817d3d8c86992803777",
+      "score_time_features": {
+        "type": "CASH_OUT",
+        "amount": 4731371.88,
+        "dest_has_prior": 0,
+        "dest_prior_count": 0,
+        "dest_prior_count_24h": 0,
+        "dest_prior_amount_sum": 0,
+        "dest_steps_since_last": null
+      },
+      "model_input": {
+        "log1p_amount": 15.369725967825346,
+        "dest_has_prior": 0,
+        "dest_prior_count": 0,
+        "type_onehot=DEBIT": 0,
+        "type_onehot=CASH_IN": 0,
+        "type_onehot=PAYMENT": 0,
+        "dest_prior_count_24h": 0,
+        "type_onehot=CASH_OUT": 1,
+        "type_onehot=TRANSFER": 0,
+        "dest_prior_amount_sum": 0,
+        "dest_steps_since_last": null
+      },
+      "semantics": "Ranking score, not a probability. Feature values describe model inputs (associations); they do not establish intent or confirm fraud. Per-case contributions are not computed for this model."
+    },
+    "computed_facts": [
+      {
+        "id": "F1",
+        "fact": "CASH_OUT of 4731371.88 simulation currency units at simulation step 383 (day 15).",
+        "source": "PS2-16910f90-5555665"
+      },
+      {
+        "id": "F2",
+        "fact": "Recipient had 0 earlier recipient-role record(s) totalling 0.00 simulation currency units before step 383.",
+        "source": "score-time features"
+      },
+      {
+        "id": "F3",
+        "fact": "Recipient had 0 recipient-role record(s) in steps 359-382.",
+        "source": "score-time features"
+      },
+      {
+        "id": "F4",
+        "fact": "Recipient has no earlier record, so steps-since-last is missing.",
+        "source": "score-time features"
+      },
+      {
+        "id": "F5",
+        "fact": "Sender had 0 earlier sender-role record(s) before step 383.",
+        "source": "transaction_event (same role)"
+      },
+      {
+        "id": "F6",
+        "fact": "Ranked 12 of capacity 100 in test day 15 (policy policy-v1).",
+        "source": "alert"
+      }
+    ],
+    "recipient_history": {
+      "score_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          1,
+          382
+        ],
+        "records": [],
+        "matches_score_time_count": true
+      },
+      "review_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          383,
+          384
+        ],
+        "records": []
+      },
+      "note": "Same-role recurrence only; it does not establish a money-flow chain. Rows in the scoring step itself are listed as review-time (order inside an hour is unknown)."
+    },
+    "sender_history": {
+      "score_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          1,
+          382
+        ],
+        "records": []
+      },
+      "review_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          383,
+          384
+        ],
+        "records": []
+      }
+    },
+    "missing_information": [
+      "No earlier records for recipient C66224368 before step 383 in this dataset.",
+      "No earlier records for sender C1671601365 before step 383 in this dataset.",
+      "Device, location, identity and customer data are not part of this dataset.",
+      "Balance fields are excluded (publisher warning: affected by cancelled fraud)."
+    ],
+    "notes": [],
+    "audit": []
+  },
+  "assistant": {
+    "case_id": "demo-test-d14-16/test/d15/r012",
+    "question": "Summarize this case.",
+    "mode": "assistant",
+    "answer": "Facts: CASH_OUT of 4731371.88 simulation currency units at step 383 [E2].\nRecipient had 0 prior records before step 383 [E3, E4].\nSender had 0 prior records [E6].\nModel ranked 12th out of 100 [E7].  \n\nModel associations: Model score rank 12 (capacity 100) [E7].  \n\nMissing information: No sender/recipient records before step 383 [E8, E9].\nDevice, location, identity, and customer data not included [E10].\nBalance fields excluded [E11].  \n\nSuggested checks: Confirm recipient steps-since-last via get_prior_account_history [E5].\nVerify device/location data availability beyond current dataset scope.\n\n[System] Scope: evidence up to step 384 (this case's evidence cutoff); later records are outside the case's evidence window. Dataset labels are not available to the assistant.",
+    "tool_calls": 1,
+    "seconds": 59.77,
+    "model": "qwen3:4b",
+    "config_sha256": "475c6e683812f8c78203b525d5b426636b461af33afe315ee84aa228800447aa",
+    "error": null,
+    "refs": {
+      "E1": "transaction",
+      "E2": "fact",
+      "E3": "fact",
+      "E4": "fact",
+      "E5": "fact",
+      "E6": "fact",
+      "E7": "fact",
+      "E8": "missing",
+      "E9": "missing",
+      "E10": "missing",
+      "E11": "missing"
+    },
+    "tool_trace": [
+      {
+        "tool": "get_case_evidence",
+        "ok": true,
+        "error": null,
+        "ms": 0.4
+      }
+    ],
+    "guard": {
+      "removed": [],
+      "valid_refs_cited": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10",
+        "E11"
+      ]
+    },
+    "label": "Local AI assistant (qwen3:4b), checked by a deterministic guard"
+  },
+  "evidence_after_assistant": {
+    "case": {
+      "case_id": "demo-test-d14-16/test/d15/r012",
+      "run_id": "demo-test-d14-16",
+      "status": "new",
+      "disposition": null,
+      "version": 1,
+      "assigned_to": null,
+      "scoring_step": 383,
+      "case_evidence_cutoff_step": 384,
+      "created_at": "2026-11-09T22:02:33.416840Z",
+      "updated_at": "2026-11-09T22:02:33.416840Z"
+    },
+    "transaction": {
+      "event_id": "PS2-16910f90-5555665",
+      "source_row": 5555665,
+      "step": 383,
+      "type": "CASH_OUT",
+      "amount": "4731371.88",
+      "name_orig": "C1671601365",
+      "name_dest": "C66224368",
+      "unit": "simulation currency units"
+    },
+    "model_evidence": {
+      "score": 0.9994449755786162,
+      "rank": 12,
+      "capacity": 100,
+      "simulation_day": 15,
+      "partition": "test",
+      "model_version": "champion-v1",
+      "feature_contract": "features-v1",
+      "policy_version": "policy-v1",
+      "feature_sha256": "2214a9f8f861730b6c1a90eca9866c567836aa10c6422817d3d8c86992803777",
+      "score_time_features": {
+        "type": "CASH_OUT",
+        "amount": 4731371.88,
+        "dest_has_prior": 0,
+        "dest_prior_count": 0,
+        "dest_prior_count_24h": 0,
+        "dest_prior_amount_sum": 0,
+        "dest_steps_since_last": null
+      },
+      "model_input": {
+        "log1p_amount": 15.369725967825346,
+        "dest_has_prior": 0,
+        "dest_prior_count": 0,
+        "type_onehot=DEBIT": 0,
+        "type_onehot=CASH_IN": 0,
+        "type_onehot=PAYMENT": 0,
+        "dest_prior_count_24h": 0,
+        "type_onehot=CASH_OUT": 1,
+        "type_onehot=TRANSFER": 0,
+        "dest_prior_amount_sum": 0,
+        "dest_steps_since_last": null
+      },
+      "semantics": "Ranking score, not a probability. Feature values describe model inputs (associations); they do not establish intent or confirm fraud. Per-case contributions are not computed for this model."
+    },
+    "computed_facts": [
+      {
+        "id": "F1",
+        "fact": "CASH_OUT of 4731371.88 simulation currency units at simulation step 383 (day 15).",
+        "source": "PS2-16910f90-5555665"
+      },
+      {
+        "id": "F2",
+        "fact": "Recipient had 0 earlier recipient-role record(s) totalling 0.00 simulation currency units before step 383.",
+        "source": "score-time features"
+      },
+      {
+        "id": "F3",
+        "fact": "Recipient had 0 recipient-role record(s) in steps 359-382.",
+        "source": "score-time features"
+      },
+      {
+        "id": "F4",
+        "fact": "Recipient has no earlier record, so steps-since-last is missing.",
+        "source": "score-time features"
+      },
+      {
+        "id": "F5",
+        "fact": "Sender had 0 earlier sender-role record(s) before step 383.",
+        "source": "transaction_event (same role)"
+      },
+      {
+        "id": "F6",
+        "fact": "Ranked 12 of capacity 100 in test day 15 (policy policy-v1).",
+        "source": "alert"
+      }
+    ],
+    "recipient_history": {
+      "score_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          1,
+          382
+        ],
+        "records": [],
+        "matches_score_time_count": true
+      },
+      "review_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          383,
+          384
+        ],
+        "records": []
+      },
+      "note": "Same-role recurrence only; it does not establish a money-flow chain. Rows in the scoring step itself are listed as review-time (order inside an hour is unknown)."
+    },
+    "sender_history": {
+      "score_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          1,
+          382
+        ],
+        "records": []
+      },
+      "review_time": {
+        "count": 0,
+        "amount_sum": "0",
+        "shown": 0,
+        "steps": [
+          383,
+          384
+        ],
+        "records": []
+      }
+    },
+    "missing_information": [
+      "No earlier records for recipient C66224368 before step 383 in this dataset.",
+      "No earlier records for sender C1671601365 before step 383 in this dataset.",
+      "Device, location, identity and customer data are not part of this dataset.",
+      "Balance fields are excluded (publisher warning: affected by cancelled fraud)."
+    ],
+    "notes": [],
+    "audit": []
+  },
+  "assistant_changed_case": false,
+  "completed": false,
+  "error": "locator.selectOption: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Disposition (required to close)', { exact: true })\u001b[22m\n\n    at C:\\Users\\Abdallah Yehya\\Documents\\Codex\\2026-11-01\\oka\\work\\record_demo.cjs:115:75",
+  "protected_report_hashes_after": {
+    "assistant_eval_holdout.json": "aacba83e2e1d6fc911cbfb50ff1f6af7cdad14065d003e0569c621c29ea64295",
+    "assistant_eval_v2_holdout.json": "8aa2548fe90849ea38fd8ade72bdda63d695c82566ff1e1ae474c57bbf4dc46d",
+    "assistant_freeze_v2.json": "5d821849097669677650db508477bedac886eeee524e92afa1a0d32a0a4f285b"
+  },
+  "protected_reports_unchanged": true
+}

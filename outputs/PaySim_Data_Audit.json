@@ -1,0 +1,4604 @@
+{
+  "audit_date_local": "2026-11-08",
+  "status": "downloaded_and_profiled_no_model_training",
+  "source_url": "https://www.kaggle.com/datasets/ealaxi/paysim1",
+  "metadata_url": "https://www.kaggle.com/api/v1/datasets/view/ealaxi/paysim1",
+  "publisher_version": 2,
+  "publisher_license": "CC BY-SA 4.0",
+  "original_csv_name": "PS_20174392719_1491204439457_log.csv",
+  "archive_path": "C:\\Users\\Abdallah Yehya\\Documents\\Codex\\2026-11-01\\oka\\outputs\\data\\PaySim_v2.zip",
+  "working_csv_path": "C:\\Users\\Abdallah Yehya\\Documents\\Codex\\2026-11-01\\oka\\work\\data\\raw\\paysim-v2.csv",
+  "archive_bytes": 186385561,
+  "csv_bytes": 493534783,
+  "archive_sha256": "f7eef9ffad5cfa64a034143a5c9b30491d189420b273d5ad5723ca40b596613d",
+  "csv_sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+  "columns": [
+    "step",
+    "type",
+    "amount",
+    "nameOrig",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "nameDest",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFraud",
+    "isFlaggedFraud"
+  ],
+  "rows": 6362620,
+  "positive_labels": 8213,
+  "negative_labels": 6354407,
+  "positive_fraction": 0.001290820448180152,
+  "policy_flagged": 16,
+  "label_values": [
+    0,
+    1
+  ],
+  "policy_flag_values": [
+    0,
+    1
+  ],
+  "min_step": 1,
+  "max_step": 743,
+  "observed_steps": 743,
+  "missing_values": {
+    "step": 0,
+    "type": 0,
+    "amount": 0,
+    "nameOrig": 0,
+    "oldbalanceOrg": 0,
+    "newbalanceOrig": 0,
+    "nameDest": 0,
+    "oldbalanceDest": 0,
+    "newbalanceDest": 0,
+    "isFraud": 0,
+    "isFlaggedFraud": 0
+  },
+  "negative_amount_rows": 0,
+  "min_amount": 0.0,
+  "max_amount": 92445516.64,
+  "by_type": {
+    "CASH_IN": {
+      "rows": 1399284,
+      "positives": 0,
+      "policy_flagged": 0
+    },
+    "CASH_OUT": {
+      "rows": 2237500,
+      "positives": 4116,
+      "policy_flagged": 0
+    },
+    "DEBIT": {
+      "rows": 41432,
+      "positives": 0,
+      "policy_flagged": 0
+    },
+    "PAYMENT": {
+      "rows": 2151495,
+      "positives": 0,
+      "policy_flagged": 0
+    },
+    "TRANSFER": {
+      "rows": 532909,
+      "positives": 4097,
+      "policy_flagged": 16
+    }
+  },
+  "by_step": [
+    {
+      "step": 1,
+      "rows": 2708,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 2,
+      "rows": 1014,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 3,
+      "rows": 552,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 4,
+      "rows": 565,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 5,
+      "rows": 665,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 6,
+      "rows": 1660,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 7,
+      "rows": 6837,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 8,
+      "rows": 21097,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 9,
+      "rows": 37628,
+      "positives": 19,
+      "policy_flagged": 0
+    },
+    {
+      "step": 10,
+      "rows": 35991,
+      "positives": 11,
+      "policy_flagged": 0
+    },
+    {
+      "step": 11,
+      "rows": 37241,
+      "positives": 7,
+      "policy_flagged": 0
+    },
+    {
+      "step": 12,
+      "rows": 36153,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 13,
+      "rows": 37515,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 14,
+      "rows": 41485,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 15,
+      "rows": 44609,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 16,
+      "rows": 42471,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 17,
+      "rows": 43361,
+      "positives": 7,
+      "policy_flagged": 0
+    },
+    {
+      "step": 18,
+      "rows": 49579,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 19,
+      "rows": 51352,
+      "positives": 11,
+      "policy_flagged": 0
+    },
+    {
+      "step": 20,
+      "rows": 40625,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 21,
+      "rows": 19152,
+      "positives": 5,
+      "policy_flagged": 0
+    },
+    {
+      "step": 22,
+      "rows": 12635,
+      "positives": 23,
+      "policy_flagged": 0
+    },
+    {
+      "step": 23,
+      "rows": 6144,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 24,
+      "rows": 3216,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 25,
+      "rows": 1598,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 26,
+      "rows": 440,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 27,
+      "rows": 41,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 28,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 29,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 30,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 31,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 32,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 33,
+      "rows": 23616,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 34,
+      "rows": 30904,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 35,
+      "rows": 29157,
+      "positives": 15,
+      "policy_flagged": 0
+    },
+    {
+      "step": 36,
+      "rows": 39774,
+      "positives": 19,
+      "policy_flagged": 0
+    },
+    {
+      "step": 37,
+      "rows": 34000,
+      "positives": 13,
+      "policy_flagged": 0
+    },
+    {
+      "step": 38,
+      "rows": 31453,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 39,
+      "rows": 23391,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 40,
+      "rows": 34270,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 41,
+      "rows": 36348,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 42,
+      "rows": 41304,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 43,
+      "rows": 45060,
+      "positives": 13,
+      "policy_flagged": 0
+    },
+    {
+      "step": 44,
+      "rows": 38523,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 45,
+      "rows": 18500,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 46,
+      "rows": 12445,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 47,
+      "rows": 8681,
+      "positives": 21,
+      "policy_flagged": 0
+    },
+    {
+      "step": 48,
+      "rows": 5693,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 49,
+      "rows": 764,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 50,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 51,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 52,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 53,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 54,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 55,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 56,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 57,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 58,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 59,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 60,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 61,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 62,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 63,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 64,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 65,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 66,
+      "rows": 24,
+      "positives": 24,
+      "policy_flagged": 0
+    },
+    {
+      "step": 67,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 68,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 69,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 70,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 71,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 72,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 73,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 74,
+      "rows": 22,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 75,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 76,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 77,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 78,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 79,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 80,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 81,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 82,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 83,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 84,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 85,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 86,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 87,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 88,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 89,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 90,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 91,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 92,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 93,
+      "rows": 4444,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 94,
+      "rows": 10372,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 95,
+      "rows": 6858,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 96,
+      "rows": 6350,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 97,
+      "rows": 685,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 98,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 99,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 100,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 101,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 102,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 103,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 104,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 105,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 106,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 107,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 108,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 109,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 110,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 111,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 112,
+      "rows": 2,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 113,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 114,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 115,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 116,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 117,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 118,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 119,
+      "rows": 5740,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 120,
+      "rows": 3144,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 121,
+      "rows": 1074,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 122,
+      "rows": 414,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 123,
+      "rows": 52,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 124,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 125,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 126,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 127,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 128,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 129,
+      "rows": 21986,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 130,
+      "rows": 32890,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 131,
+      "rows": 36375,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 132,
+      "rows": 35936,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 133,
+      "rows": 35147,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 134,
+      "rows": 32391,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 135,
+      "rows": 27556,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 136,
+      "rows": 30340,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 137,
+      "rows": 32559,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 138,
+      "rows": 31422,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 139,
+      "rows": 46054,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 140,
+      "rows": 37012,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 141,
+      "rows": 16434,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 142,
+      "rows": 12189,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 143,
+      "rows": 7609,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 144,
+      "rows": 3523,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 145,
+      "rows": 1117,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 146,
+      "rows": 522,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 147,
+      "rows": 84,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 148,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 149,
+      "rows": 22,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 150,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 151,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 152,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 153,
+      "rows": 19475,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 154,
+      "rows": 29241,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 155,
+      "rows": 29927,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 156,
+      "rows": 27603,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 157,
+      "rows": 29764,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 158,
+      "rows": 27839,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 159,
+      "rows": 27561,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 160,
+      "rows": 27765,
+      "positives": 26,
+      "policy_flagged": 0
+    },
+    {
+      "step": 161,
+      "rows": 33049,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 162,
+      "rows": 40622,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 163,
+      "rows": 46352,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 164,
+      "rows": 39102,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 165,
+      "rows": 16542,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 166,
+      "rows": 12176,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 167,
+      "rows": 7946,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 168,
+      "rows": 3824,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 169,
+      "rows": 1464,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 170,
+      "rows": 529,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 171,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 172,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 173,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 174,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 175,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 176,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 177,
+      "rows": 17336,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 178,
+      "rows": 28204,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 179,
+      "rows": 30534,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 180,
+      "rows": 31481,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 181,
+      "rows": 31749,
+      "positives": 11,
+      "policy_flagged": 0
+    },
+    {
+      "step": 182,
+      "rows": 31900,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 183,
+      "rows": 31199,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 184,
+      "rows": 32175,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 185,
+      "rows": 37323,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 186,
+      "rows": 43747,
+      "positives": 17,
+      "policy_flagged": 0
+    },
+    {
+      "step": 187,
+      "rows": 49083,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 188,
+      "rows": 39079,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 189,
+      "rows": 17674,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 190,
+      "rows": 12669,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 191,
+      "rows": 9111,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 192,
+      "rows": 4314,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 193,
+      "rows": 1511,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 194,
+      "rows": 671,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 195,
+      "rows": 141,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 196,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 197,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 198,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 199,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 200,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 201,
+      "rows": 17963,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 202,
+      "rows": 31949,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 203,
+      "rows": 36176,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 204,
+      "rows": 36856,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 205,
+      "rows": 33549,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 206,
+      "rows": 29777,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 207,
+      "rows": 28288,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 208,
+      "rows": 29058,
+      "positives": 21,
+      "policy_flagged": 0
+    },
+    {
+      "step": 209,
+      "rows": 30372,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 210,
+      "rows": 33004,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 211,
+      "rows": 36889,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 212,
+      "rows": 34047,
+      "positives": 40,
+      "policy_flagged": 1
+    },
+    {
+      "step": 213,
+      "rows": 14775,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 214,
+      "rows": 10746,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 215,
+      "rows": 7975,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 216,
+      "rows": 4130,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 217,
+      "rows": 3347,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 218,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 219,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 220,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 221,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 222,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 223,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 224,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 225,
+      "rows": 18366,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 226,
+      "rows": 27522,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 227,
+      "rows": 30871,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 228,
+      "rows": 30965,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 229,
+      "rows": 28304,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 230,
+      "rows": 26034,
+      "positives": 17,
+      "policy_flagged": 0
+    },
+    {
+      "step": 231,
+      "rows": 26968,
+      "positives": 17,
+      "policy_flagged": 0
+    },
+    {
+      "step": 232,
+      "rows": 27482,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 233,
+      "rows": 14703,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 234,
+      "rows": 34053,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 235,
+      "rows": 47491,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 236,
+      "rows": 37109,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 237,
+      "rows": 16003,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 238,
+      "rows": 10920,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 239,
+      "rows": 8554,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 240,
+      "rows": 4189,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 241,
+      "rows": 1865,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 242,
+      "rows": 637,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 243,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 244,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 245,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 246,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 247,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 248,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 249,
+      "rows": 23209,
+      "positives": 28,
+      "policy_flagged": 0
+    },
+    {
+      "step": 250,
+      "rows": 31854,
+      "positives": 22,
+      "policy_flagged": 1
+    },
+    {
+      "step": 251,
+      "rows": 35269,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 252,
+      "rows": 35590,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 253,
+      "rows": 33311,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 254,
+      "rows": 29553,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 255,
+      "rows": 28840,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 256,
+      "rows": 28570,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 257,
+      "rows": 26843,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 258,
+      "rows": 27662,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 259,
+      "rows": 43328,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 260,
+      "rows": 33674,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 261,
+      "rows": 14420,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 262,
+      "rows": 11125,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 263,
+      "rows": 8021,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 264,
+      "rows": 4042,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 265,
+      "rows": 1581,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 266,
+      "rows": 767,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 267,
+      "rows": 77,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 268,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 269,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 270,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 271,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 272,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 273,
+      "rows": 7871,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 274,
+      "rows": 19202,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 275,
+      "rows": 24797,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 276,
+      "rows": 26383,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 277,
+      "rows": 25925,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 278,
+      "rows": 25737,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 279,
+      "rows": 25925,
+      "positives": 22,
+      "policy_flagged": 1
+    },
+    {
+      "step": 280,
+      "rows": 25956,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 281,
+      "rows": 27778,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 282,
+      "rows": 31118,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 283,
+      "rows": 36644,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 284,
+      "rows": 33449,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 285,
+      "rows": 14266,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 286,
+      "rows": 11333,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 287,
+      "rows": 6889,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 288,
+      "rows": 4018,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 289,
+      "rows": 1437,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 290,
+      "rows": 487,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 291,
+      "rows": 44,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 292,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 293,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 294,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 295,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 296,
+      "rows": 22,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 297,
+      "rows": 20609,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 298,
+      "rows": 29579,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 299,
+      "rows": 31940,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 300,
+      "rows": 31176,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 301,
+      "rows": 30881,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 302,
+      "rows": 29127,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 303,
+      "rows": 24714,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 304,
+      "rows": 26697,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 305,
+      "rows": 34595,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 306,
+      "rows": 43615,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 307,
+      "rows": 46968,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 308,
+      "rows": 36983,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 309,
+      "rows": 15147,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 310,
+      "rows": 11393,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 311,
+      "rows": 9863,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 312,
+      "rows": 3266,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 313,
+      "rows": 1305,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 314,
+      "rows": 512,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 315,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 316,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 317,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 318,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 319,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 320,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 321,
+      "rows": 17768,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 322,
+      "rows": 27147,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 323,
+      "rows": 29884,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 324,
+      "rows": 29430,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 325,
+      "rows": 27901,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 326,
+      "rows": 26655,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 327,
+      "rows": 25183,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 328,
+      "rows": 26877,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 329,
+      "rows": 32161,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 330,
+      "rows": 36682,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 331,
+      "rows": 40186,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 332,
+      "rows": 36156,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 333,
+      "rows": 14553,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 334,
+      "rows": 12016,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 335,
+      "rows": 10456,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 336,
+      "rows": 2932,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 337,
+      "rows": 320,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 338,
+      "rows": 529,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 339,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 340,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 341,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 342,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 343,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 344,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 345,
+      "rows": 14670,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 346,
+      "rows": 26073,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 347,
+      "rows": 30222,
+      "positives": 0,
+      "policy_flagged": 0
+    },
+    {
+      "step": 348,
+      "rows": 29467,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 349,
+      "rows": 29552,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 350,
+      "rows": 28245,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 351,
+      "rows": 26927,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 352,
+      "rows": 27139,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 353,
+      "rows": 30420,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 354,
+      "rows": 40696,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 355,
+      "rows": 44787,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 356,
+      "rows": 33528,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 357,
+      "rows": 15096,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 358,
+      "rows": 12050,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 359,
+      "rows": 7991,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 360,
+      "rows": 3508,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 361,
+      "rows": 1441,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 362,
+      "rows": 504,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 363,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 364,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 365,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 366,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 367,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 368,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 369,
+      "rows": 14490,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 370,
+      "rows": 25429,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 371,
+      "rows": 28388,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 372,
+      "rows": 29515,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 373,
+      "rows": 28853,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 374,
+      "rows": 27727,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 375,
+      "rows": 26103,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 376,
+      "rows": 20122,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 377,
+      "rows": 18183,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 378,
+      "rows": 37127,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 379,
+      "rows": 41759,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 380,
+      "rows": 37693,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 381,
+      "rows": 14961,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 382,
+      "rows": 11829,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 383,
+      "rows": 7818,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 384,
+      "rows": 3588,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 385,
+      "rows": 1419,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 386,
+      "rows": 633,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 387,
+      "rows": 28,
+      "positives": 28,
+      "policy_flagged": 1
+    },
+    {
+      "step": 388,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 389,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 390,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 391,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 392,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 393,
+      "rows": 19269,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 394,
+      "rows": 28959,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 395,
+      "rows": 22797,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 396,
+      "rows": 34075,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 397,
+      "rows": 30348,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 398,
+      "rows": 26656,
+      "positives": 26,
+      "policy_flagged": 0
+    },
+    {
+      "step": 399,
+      "rows": 30223,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 400,
+      "rows": 30910,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 401,
+      "rows": 33468,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 402,
+      "rows": 40218,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 403,
+      "rows": 45155,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 404,
+      "rows": 36726,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 405,
+      "rows": 16604,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 406,
+      "rows": 12023,
+      "positives": 24,
+      "policy_flagged": 0
+    },
+    {
+      "step": 407,
+      "rows": 7937,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 408,
+      "rows": 8256,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 409,
+      "rows": 483,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 410,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 411,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 412,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 413,
+      "rows": 289,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 414,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 415,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 416,
+      "rows": 2182,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 417,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 418,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 419,
+      "rows": 1257,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 420,
+      "rows": 2620,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 421,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 422,
+      "rows": 1259,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 423,
+      "rows": 766,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 424,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 425,
+      "rows": 28,
+      "positives": 28,
+      "policy_flagged": 2
+    },
+    {
+      "step": 426,
+      "rows": 5139,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 427,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 428,
+      "rows": 2792,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 429,
+      "rows": 2357,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 430,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 431,
+      "rows": 1685,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 432,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 433,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 434,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 435,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 436,
+      "rows": 248,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 437,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 438,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 439,
+      "rows": 883,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 440,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 441,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 442,
+      "rows": 1222,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 443,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 444,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 445,
+      "rows": 64,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 446,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 447,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 448,
+      "rows": 2548,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 449,
+      "rows": 1194,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 450,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 451,
+      "rows": 3751,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 452,
+      "rows": 308,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 453,
+      "rows": 59,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 454,
+      "rows": 39,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 455,
+      "rows": 824,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 456,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 457,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 458,
+      "rows": 438,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 459,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 460,
+      "rows": 59,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 461,
+      "rows": 83,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 462,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 463,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 464,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 465,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 466,
+      "rows": 984,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 467,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 468,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 469,
+      "rows": 6016,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 470,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 471,
+      "rows": 2620,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 472,
+      "rows": 84,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 473,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 474,
+      "rows": 2728,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 475,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 476,
+      "rows": 3755,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 477,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 478,
+      "rows": 1908,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 479,
+      "rows": 904,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 480,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 481,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 482,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 483,
+      "rows": 317,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 484,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 485,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 486,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 487,
+      "rows": 912,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 488,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 489,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 490,
+      "rows": 3820,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 491,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 492,
+      "rows": 5119,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 493,
+      "rows": 1819,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 494,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 495,
+      "rows": 3256,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 496,
+      "rows": 873,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 497,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 498,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 499,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 500,
+      "rows": 6108,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 501,
+      "rows": 28,
+      "positives": 28,
+      "policy_flagged": 0
+    },
+    {
+      "step": 502,
+      "rows": 313,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 503,
+      "rows": 1878,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 504,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 505,
+      "rows": 936,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 506,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 507,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 508,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 509,
+      "rows": 288,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 510,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 511,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 512,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 513,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 514,
+      "rows": 8733,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 515,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 516,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 517,
+      "rows": 1391,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 518,
+      "rows": 3488,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 519,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 520,
+      "rows": 3037,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 521,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 522,
+      "rows": 18631,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 523,
+      "rows": 30,
+      "positives": 30,
+      "policy_flagged": 0
+    },
+    {
+      "step": 524,
+      "rows": 2664,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 525,
+      "rows": 8023,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 526,
+      "rows": 2470,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 527,
+      "rows": 2697,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 528,
+      "rows": 937,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 529,
+      "rows": 33,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 530,
+      "rows": 409,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 531,
+      "rows": 250,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 532,
+      "rows": 95,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 533,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 534,
+      "rows": 531,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 535,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 536,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 537,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 538,
+      "rows": 3120,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 539,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 540,
+      "rows": 5476,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 541,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 542,
+      "rows": 4475,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 543,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 544,
+      "rows": 9358,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 545,
+      "rows": 3562,
+      "positives": 0,
+      "policy_flagged": 0
+    },
+    {
+      "step": 546,
+      "rows": 7771,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 547,
+      "rows": 2261,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 548,
+      "rows": 5689,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 549,
+      "rows": 642,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 550,
+      "rows": 4804,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 551,
+      "rows": 949,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 552,
+      "rows": 1517,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 553,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 554,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 1
+    },
+    {
+      "step": 555,
+      "rows": 144,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 556,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 557,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 558,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 559,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 560,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 561,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 562,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 563,
+      "rows": 3284,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 564,
+      "rows": 3546,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 565,
+      "rows": 5425,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 566,
+      "rows": 1421,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 567,
+      "rows": 4356,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 568,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 569,
+      "rows": 1182,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 570,
+      "rows": 1965,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 571,
+      "rows": 4256,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 572,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 573,
+      "rows": 3487,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 574,
+      "rows": 2614,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 575,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 576,
+      "rows": 877,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 577,
+      "rows": 364,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 578,
+      "rows": 269,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 579,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 580,
+      "rows": 58,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 581,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 582,
+      "rows": 775,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 583,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 584,
+      "rows": 281,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 585,
+      "rows": 2047,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 586,
+      "rows": 1581,
+      "positives": 12,
+      "policy_flagged": 1
+    },
+    {
+      "step": 587,
+      "rows": 2740,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 588,
+      "rows": 4894,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 589,
+      "rows": 6245,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 590,
+      "rows": 6584,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 591,
+      "rows": 57,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 592,
+      "rows": 5373,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 593,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 594,
+      "rows": 6536,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 595,
+      "rows": 5434,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 596,
+      "rows": 9319,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 597,
+      "rows": 2486,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 598,
+      "rows": 934,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 599,
+      "rows": 1816,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 600,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 601,
+      "rows": 865,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 602,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 603,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 604,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 605,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 606,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 607,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 608,
+      "rows": 1082,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 609,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 610,
+      "rows": 1199,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 611,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 612,
+      "rows": 2677,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 613,
+      "rows": 45,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 614,
+      "rows": 1278,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 615,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 616,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 617,
+      "rows": 2680,
+      "positives": 16,
+      "policy_flagged": 1
+    },
+    {
+      "step": 618,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 619,
+      "rows": 2800,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 620,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 621,
+      "rows": 1121,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 622,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 623,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 624,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 625,
+      "rows": 24,
+      "positives": 24,
+      "policy_flagged": 0
+    },
+    {
+      "step": 626,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 627,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 628,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 629,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 630,
+      "rows": 150,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 631,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 632,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 633,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 634,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 635,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 636,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 637,
+      "rows": 3390,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 638,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 639,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 640,
+      "rows": 1398,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 641,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 642,
+      "rows": 1141,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 643,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 644,
+      "rows": 2267,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 645,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 646,
+      "rows": 20,
+      "positives": 20,
+      "policy_flagged": 2
+    },
+    {
+      "step": 647,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 648,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 649,
+      "rows": 263,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 650,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 651,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 652,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 653,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 654,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 655,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 656,
+      "rows": 1965,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 657,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 658,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 659,
+      "rows": 2500,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 660,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 661,
+      "rows": 4877,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 662,
+      "rows": 2,
+      "positives": 2,
+      "policy_flagged": 0
+    },
+    {
+      "step": 663,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 664,
+      "rows": 1125,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 665,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 666,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 667,
+      "rows": 1400,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 668,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 669,
+      "rows": 322,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 670,
+      "rows": 1906,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 671,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 1
+    },
+    {
+      "step": 672,
+      "rows": 153,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 673,
+      "rows": 445,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 674,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 675,
+      "rows": 30,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 676,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 677,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 678,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 679,
+      "rows": 72,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 680,
+      "rows": 22,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 681,
+      "rows": 4703,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 682,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 683,
+      "rows": 2192,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 684,
+      "rows": 4562,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 685,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 686,
+      "rows": 4689,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 687,
+      "rows": 8040,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 688,
+      "rows": 7885,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 689,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 690,
+      "rows": 4972,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 691,
+      "rows": 4809,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 692,
+      "rows": 6898,
+      "positives": 20,
+      "policy_flagged": 0
+    },
+    {
+      "step": 693,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 694,
+      "rows": 2664,
+      "positives": 24,
+      "policy_flagged": 0
+    },
+    {
+      "step": 695,
+      "rows": 2827,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 696,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 697,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 698,
+      "rows": 65,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 699,
+      "rows": 55,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 700,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 701,
+      "rows": 18,
+      "positives": 18,
+      "policy_flagged": 0
+    },
+    {
+      "step": 702,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 1
+    },
+    {
+      "step": 703,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 704,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 705,
+      "rows": 2362,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 706,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 707,
+      "rows": 309,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 708,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 709,
+      "rows": 2313,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 710,
+      "rows": 1788,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 711,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 712,
+      "rows": 23,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 713,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 714,
+      "rows": 681,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 715,
+      "rows": 1879,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 716,
+      "rows": 140,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 717,
+      "rows": 632,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 718,
+      "rows": 918,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 719,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 720,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 721,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 722,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 723,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 724,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 725,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 726,
+      "rows": 22,
+      "positives": 22,
+      "policy_flagged": 0
+    },
+    {
+      "step": 727,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 728,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 729,
+      "rows": 4,
+      "positives": 4,
+      "policy_flagged": 0
+    },
+    {
+      "step": 730,
+      "rows": 28,
+      "positives": 28,
+      "policy_flagged": 2
+    },
+    {
+      "step": 731,
+      "rows": 16,
+      "positives": 16,
+      "policy_flagged": 0
+    },
+    {
+      "step": 732,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 733,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 734,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    },
+    {
+      "step": 735,
+      "rows": 12,
+      "positives": 12,
+      "policy_flagged": 0
+    },
+    {
+      "step": 736,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 737,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 738,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 739,
+      "rows": 10,
+      "positives": 10,
+      "policy_flagged": 0
+    },
+    {
+      "step": 740,
+      "rows": 6,
+      "positives": 6,
+      "policy_flagged": 0
+    },
+    {
+      "step": 741,
+      "rows": 22,
+      "positives": 22,
+      "policy_flagged": 1
+    },
+    {
+      "step": 742,
+      "rows": 14,
+      "positives": 14,
+      "policy_flagged": 0
+    },
+    {
+      "step": 743,
+      "rows": 8,
+      "positives": 8,
+      "policy_flagged": 0
+    }
+  ],
+  "proposed_temporal_windows_not_yet_frozen": {
+    "train_proposal": {
+      "first_step": 1,
+      "last_step": 281,
+      "rows": 3820599,
+      "positives": 3193,
+      "positive_fraction": 0.000835732826187726
+    },
+    "validation_proposal": {
+      "first_step": 282,
+      "last_step": 355,
+      "rows": 1293285,
+      "positives": 770,
+      "positive_fraction": 0.0005953830748829531
+    },
+    "test_proposal": {
+      "first_step": 356,
+      "last_step": 743,
+      "rows": 1248736,
+      "positives": 4250,
+      "positive_fraction": 0.0034034415601055788
+    }
+  },
+  "account_recurrence": {
+    "nameOrig": {
+      "distinct_ids": 6353307,
+      "ids_with_multiple_rows": 9298,
+      "rows_on_ids_with_multiple_rows": 18611,
+      "rows_with_strictly_earlier_step_history": 9266,
+      "fraction_with_strictly_earlier_step_history": 0.0014563183091242287
+    },
+    "nameDest": {
+      "distinct_ids": 2722362,
+      "ids_with_multiple_rows": 459658,
+      "rows_on_ids_with_multiple_rows": 4099916,
+      "rows_with_strictly_earlier_step_history": 3592717,
+      "fraction_with_strictly_earlier_step_history": 0.5646599985540548
+    }
+  },
+  "limitations": [
+    "Not a duplicate-row audit, trained benchmark, or local-bank validation.",
+    "No within-hour event order is asserted.",
+    "No non-finite numeric-value audit beyond missing-value checks was performed.",
+    "Published license and balance warning confirmed from publisher metadata.",
+    "Proposed split windows require development-protocol approval before training."
+  ],
+  "elapsed_seconds": 32.56,
+  "simulation_activity_diagnostics": {
+    "all_hours_with_only_positive_rows": 320,
+    "positive_rows_in_those_hours": 3620,
+    "proposed_test_observed_hours": 388,
+    "proposed_test_hours_with_only_positive_rows": 195,
+    "proposed_test_positives_in_those_hours": 2250,
+    "proposed_test_mixed_hours_rows": 1242924,
+    "proposed_test_mixed_hours_positives": 2000,
+    "interpretation": "Evaluator-only artifact diagnostic; not a serving filter or model result."
+  }
+}

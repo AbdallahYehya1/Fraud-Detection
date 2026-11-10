@@ -1,0 +1,88 @@
+# Score-time feature contract. Frozen 2026-11-09 before fitting.
+# The validator (fraudinv.contract) rejects any feature whose name or declared
+# inputs touch a forbidden source field, and any feature not declared here.
+contract_version: features-v1
+status: frozen
+frozen_date: 2026-11-09
+split_protocol: split-v1
+
+units:
+  amount: simulation currency units (currency not established; never shown as EGP/USD)
+  step: relative simulation hour
+  source_precision: amounts stored as given in the CSV (at most 2 decimal places; see audit)
+
+source_fields:
+  step:            {role: time_index,     predictor: false, note: raw absolute step is non-stationary}
+  type:            {role: transaction,    predictor: true}
+  amount:          {role: transaction,    predictor: true}
+  nameOrig:        {role: lookup_key,     predictor: false}
+  nameDest:        {role: lookup_key,     predictor: false}
+  oldbalanceOrg:   {role: forbidden_balance, predictor: false}
+  newbalanceOrig:  {role: forbidden_balance, predictor: false}
+  oldbalanceDest:  {role: forbidden_balance, predictor: false}
+  newbalanceDest:  {role: forbidden_balance, predictor: false}
+  isFraud:         {role: target,         predictor: false}
+  isFlaggedFraud:  {role: policy_comparator, predictor: false}
+  source_row:      {role: lookup_key,     predictor: false}
+  event_id:        {role: lookup_key,     predictor: false}
+
+# Fields that can never appear as, or feed into, a predictor. Matching is
+# case-insensitive on both feature names and declared inputs.
+forbidden_inputs: [oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest,
+                   isFraud, isFlaggedFraud, nameOrig, nameDest, source_row, event_id]
+forbidden_name_patterns: ["balance", "isfraud", "isflagged", "nameorig", "namedest",
+                          "source_row", "event_id", "label", "target"]
+
+transaction_types: [CASH_IN, CASH_OUT, DEBIT, PAYMENT, TRANSFER]
+
+# Candidate predictors. Day 3 selects among these on validation only.
+# "keys" are lookup columns used to build history; they are not predictor inputs.
+features:
+  type_onehot:
+    inputs: [type]
+    status: primary
+  log1p_amount:
+    inputs: [amount]
+    status: primary
+    transform: log1p, no fitted parameters; any scaling fitted on train only
+  dest_has_prior:
+    inputs: [step]
+    keys: [nameDest]
+    status: candidate
+    definition: 1 if any row with the same nameDest (recipient role) has step < s
+  dest_prior_count:
+    inputs: [step]
+    keys: [nameDest]
+    status: candidate
+    definition: count of recipient-role rows with the same nameDest and step < s
+  dest_prior_amount_sum:
+    inputs: [step, amount]
+    keys: [nameDest]
+    status: candidate
+    definition: sum of amount over those rows (log1p applied before modelling)
+  dest_prior_count_24h:
+    inputs: [step]
+    keys: [nameDest]
+    status: candidate
+    definition: recipient-role rows with the same nameDest and s-24 <= step < s
+  dest_steps_since_last:
+    inputs: [step]
+    keys: [nameDest]
+    status: candidate
+    definition: s minus latest earlier step for nameDest; missing when dest_has_prior = 0
+  hour_of_day:
+    inputs: [step]
+    status: ablation_only
+    definition: (step - 1) mod 24; reported only as a documented ablation (pure-positive-hour shortcut risk)
+
+not_supported_v1:
+  sender_history: >-
+    strictly earlier-step sender history exists for 0.146% of rows; excluded from v1,
+    shown as case evidence only where it exists
+  account_prefix: C/M prefix meaning is not confirmed by the publisher; excluded
+  transfer_chains: same-role recurrence does not establish a money-flow chain
+
+score_time_vs_review_time: >-
+  Score-time features are computed at scoring_step from history with step < scoring_step
+  and are persisted with the score. Case evidence may use rows up to case_evidence_cutoff_step
+  (>= scoring_step), stored separately; it never modifies the stored score-time vector.

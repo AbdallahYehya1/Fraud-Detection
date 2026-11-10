@@ -1,0 +1,29 @@
+{
+  "_note": "Hand-authored synthetic software fixture for the Day 1 local-inference smoke test. Not PaySim data, not a real case.",
+  "case_id": "CASE-FIX-001",
+  "evidence_cutoff_step": 212,
+  "transaction": {
+    "ref": "E1",
+    "event_id": "FIX-0000042",
+    "step": 210,
+    "type": "TRANSFER",
+    "amount": 181500.00,
+    "unit": "simulation currency units",
+    "sender": "C-FIX-100",
+    "recipient": "C-FIX-200"
+  },
+  "recipient_history": {
+    "ref": "E2",
+    "earlier_records": 0,
+    "statement": "No earlier records for recipient C-FIX-200 before step 210 in this dataset."
+  },
+  "model_evidence": {
+    "ref": "E3",
+    "model_version": "fixture-model-0",
+    "risk_score": 0.87,
+    "daily_rank": 3,
+    "review_capacity": 50,
+    "note": "Ranking score, not a calibrated probability."
+  },
+  "missing_information": ["sender history (no earlier records)", "device, location and identity data are not in this dataset"]
+}

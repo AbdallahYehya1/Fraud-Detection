@@ -1,0 +1,110 @@
+{
+  "recorded_date": "2026-11-10",
+  "case_id": "demo-test-d14-16/test/d15/r012",
+  "duration_seconds": 279.87500000000006,
+  "assistant": {
+    "mode": "assistant",
+    "model": "qwen3:4b",
+    "seconds": 59.77,
+    "tool_calls": 1,
+    "case_changed": false
+  },
+  "review": {
+    "status": "closed",
+    "disposition": "needs_more_information",
+    "audit_entries": 2
+  },
+  "protected_reports_unchanged": true,
+  "protected_report_sha256": {
+    "assistant_eval_holdout.json": "aacba83e2e1d6fc911cbfb50ff1f6af7cdad14065d003e0569c621c29ea64295",
+    "assistant_eval_v2_holdout.json": "8aa2548fe90849ea38fd8ade72bdda63d695c82566ff1e1ae474c57bbf4dc46d",
+    "assistant_freeze_v2.json": "5d821849097669677650db508477bedac886eeee524e92afa1a0d32a0a4f285b"
+  },
+  "capture_edit": "Chapter cut after start-review; capture harness selector corrected. No AI response or app result was regenerated.",
+  "delivery": {
+    "file": "Fraud_Detection_Demo.mp4",
+    "bytes": 13821151,
+    "sha256": "fdd336f405412607c4ede445432d29e61e29e4e1a23ba43e6fe2c597029cf755",
+    "caption_file": "Fraud_Detection_Demo.srt",
+    "capture": "Unmodified local app behaviour; browser video with editorial captions in a separate lower band.",
+    "playback": "Real-time actions and AI generation; one chapter edit between human review actions.",
+    "full_decode_verified": true
+  },
+  "chapters": [
+    {
+      "start_seconds": 0.681,
+      "title": "1 / 7  •  FRAUD REVIEW WORKBENCH",
+      "detail": "Prioritize recorded transactions for human review. Synthetic PaySim v2; all services run locally."
+    },
+    {
+      "start_seconds": 14.691,
+      "title": "A REPRODUCIBLE MODEL AND REVIEW POLICY",
+      "detail": "Frozen features and model version. Top 100 reviews per simulation day; ranking scores are not probabilities."
+    },
+    {
+      "start_seconds": 31.739,
+      "title": "2 / 7  •  MEASURED OFFLINE RESULTS",
+      "detail": "Champion: 1,189 of 4,250 positives found at 100/day. The amount/type rule found 670."
+    },
+    {
+      "start_seconds": 45.753,
+      "title": "SIMULATOR LIMITATIONS STAY VISIBLE",
+      "detail": "Many hours contain only fraud-labelled rows. Mixed-hour hits: 505 of 2,000; no real-bank savings claim."
+    },
+    {
+      "start_seconds": 59.992,
+      "title": "3 / 7  •  A CAPACITY-LIMITED ANALYST QUEUE",
+      "detail": "Day 15: ranked alerts, simulation units and explicit missing-history indicators."
+    },
+    {
+      "start_seconds": 80.214,
+      "title": "4 / 7  •  EVIDENCE FOR THIS CASE",
+      "detail": "The case records its scoring step and review cutoff. Model associations are not proof of fraud."
+    },
+    {
+      "start_seconds": 99.242,
+      "title": "COMPUTED FACTS AND KNOWN GAPS",
+      "detail": "Source-linked facts are separated from missing device, identity and customer information."
+    },
+    {
+      "start_seconds": 117.359,
+      "title": "HISTORY AT SCORING VS. EVIDENCE AT REVIEW",
+      "detail": "A second case shows earlier recipient records and later review-time records in separate sections."
+    },
+    {
+      "start_seconds": 134.464,
+      "title": "5 / 7  •  LIVE LOCAL INVESTIGATION ASSISTANT",
+      "detail": "One case, read-only evidence tools and a fixed cutoff. This generation is shown in real time."
+    },
+    {
+      "start_seconds": 195.681,
+      "title": "CHECKED ANSWER, VISIBLE REFERENCES",
+      "detail": "The system-added scope line is distinct from model text. The assistant did not change the case."
+    },
+    {
+      "start_seconds": 219.716,
+      "title": "6 / 7  •  THE HUMAN MAKES THE DECISION",
+      "detail": "Start review, add an analyst note, and close with “needs more information.” No fraud label is asserted."
+    },
+    {
+      "start_seconds": 227.216,
+      "title": "A HUMAN DISPOSITION, RECORDED EXPLICITLY",
+      "detail": "Review is in progress. The analyst chooses “needs more information” without asserting a fraud outcome."
+    },
+    {
+      "start_seconds": 236.468,
+      "title": "AN APPEND-ONLY REVIEW TRAIL",
+      "detail": "The audit records the human actor, the previous state and the closed case disposition."
+    },
+    {
+      "start_seconds": 248.863,
+      "title": "7 / 7  •  REPRODUCIBLE, WITH HONEST LIMITS",
+      "detail": "101 tests pass. Fresh assistant holdout: 10/12; its two documented failures produced no unsafe delivered output."
+    },
+    {
+      "start_seconds": 265.863,
+      "title": "KNOWN ASSISTANT LIMITATIONS",
+      "detail": "Question-number filtering, refusal grading and short note paraphrases need further work. A small holdout is not a universal safety claim."
+    }
+  ]
+}

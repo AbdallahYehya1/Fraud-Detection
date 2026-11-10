@@ -1,0 +1,126 @@
+{
+  "check": "day4-replay-consistency",
+  "window": [
+    356,
+    365
+  ],
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "cpu_count": 16,
+    "total_gib": 15.77,
+    "available_gib": 2.59
+  },
+  "create_A": {
+    "run_id": "A",
+    "warmup_recipients": 2178399,
+    "warmup_window_rows": 399061,
+    "seconds": 63.37
+  },
+  "replay_A": {
+    "run_id": "A",
+    "status": "completed",
+    "committed_through_step": 365,
+    "rows_scored": 74152,
+    "segments_finalized": [
+      [
+        "test",
+        14
+      ],
+      [
+        "test",
+        15
+      ]
+    ],
+    "seconds": 30.53
+  },
+  "create_B": {
+    "run_id": "B",
+    "warmup_recipients": 2178399,
+    "warmup_window_rows": 399061,
+    "seconds": 71.94
+  },
+  "interruption": {
+    "crash": "injected crash in step 357 after 7548 of 15096 scores",
+    "status_after_crash": "failed",
+    "cursor_after_crash": 356,
+    "scores_left_for_crashed_step": 0,
+    "rows_in_crashed_step": 15096
+  },
+  "resume_B": {
+    "run_id": "B",
+    "status": "completed",
+    "committed_through_step": 365,
+    "rows_scored": 40624,
+    "segments_finalized": [
+      [
+        "test",
+        14
+      ],
+      [
+        "test",
+        15
+      ]
+    ],
+    "seconds": 31.73
+  },
+  "interrupted_equals_uninterrupted": {
+    "scores": true,
+    "alerts": true,
+    "cases": true
+  },
+  "counts": {
+    "scores": 74152,
+    "alerts": 42,
+    "cases": 42
+  },
+  "rerun_completed_A": {
+    "rows_scored": 0,
+    "segments": [],
+    "unchanged": true
+  },
+  "segments": [
+    {
+      "partition": "test",
+      "day": 14,
+      "first_step": 356,
+      "last_step": 360,
+      "hours": 5,
+      "capacity": 21,
+      "alerts": 21
+    },
+    {
+      "partition": "test",
+      "day": 15,
+      "first_step": 361,
+      "last_step": 365,
+      "hours": 5,
+      "capacity": 21,
+      "alerts": 21
+    }
+  ],
+  "memory_during": {
+    "total_gib": 15.77,
+    "available_gib": 1.69
+  },
+  "offline_parity": {
+    "offline_rows": 74152,
+    "replay_rows": 74152,
+    "matched": 74152,
+    "max_abs_score_diff": 0.0,
+    "exactly_equal_scores": 74152,
+    "feature_mismatches": {
+      "dest_has_prior": 0,
+      "dest_prior_count": 0,
+      "dest_prior_amount_sum": 0,
+      "dest_prior_count_24h": 0,
+      "dest_steps_since_last": 0
+    }
+  },
+  "passed": true,
+  "runtime": {
+    "total_seconds": 228.98,
+    "peak_python_process_mib": 659.4
+  }
+}

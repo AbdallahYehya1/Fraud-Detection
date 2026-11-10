@@ -1,0 +1,36 @@
+{
+  "main": {
+    "case_id": "demo-test-d14-16/test/d15/r012",
+    "status": "new",
+    "disposition": null,
+    "version": 1,
+    "assigned_to": null,
+    "simulation_day": 15,
+    "rank": 12,
+    "capacity": 100,
+    "event_id": "PS2-16910f90-5555665",
+    "step": 383,
+    "type": "CASH_OUT",
+    "amount": "4731371.88",
+    "score": 0.9994449755786162,
+    "dest_has_prior": 0,
+    "unit": "simulation currency units"
+  },
+  "history": {
+    "case_id": "demo-test-d14-16/test/d15/r002",
+    "status": "new",
+    "disposition": null,
+    "version": 1,
+    "assigned_to": null,
+    "simulation_day": 15,
+    "rank": 2,
+    "capacity": 100,
+    "event_id": "PS2-16910f90-5186080",
+    "step": 361,
+    "type": "CASH_OUT",
+    "amount": "3421212.04",
+    "score": 0.9996302113220714,
+    "dest_has_prior": 1,
+    "unit": "simulation currency units"
+  }
+}

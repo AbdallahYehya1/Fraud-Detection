@@ -1,0 +1,75 @@
+1
+00:00:00,681 --> 00:00:14,691
+1 / 7  •  FRAUD REVIEW WORKBENCH
+Prioritize recorded transactions for human review. Synthetic PaySim v2; all services run locally.
+
+2
+00:00:14,691 --> 00:00:31,739
+A REPRODUCIBLE MODEL AND REVIEW POLICY
+Frozen features and model version. Top 100 reviews per simulation day; ranking scores are not probabilities.
+
+3
+00:00:31,739 --> 00:00:45,753
+2 / 7  •  MEASURED OFFLINE RESULTS
+Champion: 1,189 of 4,250 positives found at 100/day. The amount/type rule found 670.
+
+4
+00:00:45,753 --> 00:00:59,992
+SIMULATOR LIMITATIONS STAY VISIBLE
+Many hours contain only fraud-labelled rows. Mixed-hour hits: 505 of 2,000; no real-bank savings claim.
+
+5
+00:00:59,992 --> 00:01:20,214
+3 / 7  •  A CAPACITY-LIMITED ANALYST QUEUE
+Day 15: ranked alerts, simulation units and explicit missing-history indicators.
+
+6
+00:01:20,214 --> 00:01:39,242
+4 / 7  •  EVIDENCE FOR THIS CASE
+The case records its scoring step and review cutoff. Model associations are not proof of fraud.
+
+7
+00:01:39,242 --> 00:01:57,359
+COMPUTED FACTS AND KNOWN GAPS
+Source-linked facts are separated from missing device, identity and customer information.
+
+8
+00:01:57,359 --> 00:02:14,464
+HISTORY AT SCORING VS. EVIDENCE AT REVIEW
+A second case shows earlier recipient records and later review-time records in separate sections.
+
+9
+00:02:14,464 --> 00:03:15,681
+5 / 7  •  LIVE LOCAL INVESTIGATION ASSISTANT
+One case, read-only evidence tools and a fixed cutoff. This generation is shown in real time.
+
+10
+00:03:15,681 --> 00:03:39,716
+CHECKED ANSWER, VISIBLE REFERENCES
+The system-added scope line is distinct from model text. The assistant did not change the case.
+
+11
+00:03:39,716 --> 00:03:47,216
+6 / 7  •  THE HUMAN MAKES THE DECISION
+Start review, add an analyst note, and close with “needs more information.” No fraud label is asserted.
+
+12
+00:03:47,216 --> 00:03:56,468
+A HUMAN DISPOSITION, RECORDED EXPLICITLY
+Review is in progress. The analyst chooses “needs more information” without asserting a fraud outcome.
+
+13
+00:03:56,468 --> 00:04:08,863
+AN APPEND-ONLY REVIEW TRAIL
+The audit records the human actor, the previous state and the closed case disposition.
+
+14
+00:04:08,863 --> 00:04:25,863
+7 / 7  •  REPRODUCIBLE, WITH HONEST LIMITS
+101 tests pass. Fresh assistant holdout: 10/12; its two documented failures produced no unsafe delivered output.
+
+15
+00:04:25,863 --> 00:04:39,875
+KNOWN ASSISTANT LIMITATIONS
+Question-number filtering, refusal grading and short note paraphrases need further work. A small holdout is not a universal safety claim.
+

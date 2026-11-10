@@ -1,0 +1,52 @@
+# Day 3 model/feature selection rules. Written 2026-11-09 after the Day 2
+# validation report (base features only) and BEFORE any history-feature or
+# booster model was fitted or scored.
+selection_version: selection-v1
+evaluate_on: validation
+primary_metric: average_precision (natural validation prevalence, all transaction types)
+tie_rule: >-
+  if candidates are within 2% relative AP, prefer higher validation recall at K=100/day,
+  then the simpler model (logistic regression before booster; fewer features first)
+baseline_gate: >-
+  a learned model is selected only if its validation AP exceeds the amount/type rule;
+  otherwise the rule is the champion and this is reported
+review_policy: daily top-K per (partition, simulation_day) segment, K=100, pro-rated partial segments
+reported_capacities: [50, 100, 200]
+
+feature_sets:            # every set is validated by fraudinv.contract before fitting
+  base:          [type_onehot, log1p_amount]
+  base_novelty:  [type_onehot, log1p_amount, dest_has_prior]
+  base_history:  [type_onehot, log1p_amount, dest_has_prior, dest_prior_count, dest_prior_amount_sum]
+  base_history_window: [type_onehot, log1p_amount, dest_has_prior, dest_prior_count,
+                        dest_prior_amount_sum, dest_prior_count_24h, dest_steps_since_last]
+ablation_only:           # reported, never eligible for selection
+  history_window_plus_hour: [type_onehot, log1p_amount, dest_has_prior, dest_prior_count,
+                             dest_prior_amount_sum, dest_prior_count_24h, dest_steps_since_last, hour_of_day]
+
+models:
+  logistic_regression:
+    C: [0.01, 1.0]
+    class_weight: balanced
+  hist_gradient_boosting:      # bounded search: at most 4 configurations, fixed iterations, no early stopping
+    feature_sets: [base_history, base_history_window]
+    configs:
+      - {learning_rate: 0.1, max_leaf_nodes: 15, max_iter: 200, class_weight: balanced}
+      - {learning_rate: 0.1, max_leaf_nodes: 31, max_iter: 200, class_weight: null}
+
+transforms:
+  log1p_amount: log1p then StandardScaler fitted on train (LR); raw log1p (booster)
+  dest_prior_count: log1p
+  dest_prior_amount_sum: log1p
+  dest_prior_count_24h: log1p
+  dest_steps_since_last: >-
+    log1p; missing when there is no earlier record -> 0 for LR (dest_has_prior carries the
+    missing indicator), NaN for the booster (native missing-value handling)
+  hour_of_day: >-
+    integer (step - 1) mod 24, booster config 1 only (ablation only). Changed from a one-hot
+    LR before any Day 3 run: the one-hot matrix (~1 GB) did not fit the ~2 GiB free RAM.
+
+final_test:
+  runs: once, after reports/frozen/selection.json is written
+  population: all test rows (steps 356-743), natural prevalence
+  compared_methods: [champion, amount_type_rule, logistic_regression base, seeded_random, native_policy]
+  uncertainty: day-block bootstrap (200 resamples, seed 20261109) for AP and K=100 recall/precision

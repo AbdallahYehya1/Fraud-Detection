@@ -1,0 +1,1669 @@
+{
+  "report": "day3-selection",
+  "partition_evaluated": "validation",
+  "test_partition_accessed": false,
+  "selection_protocol": "selection-v1",
+  "feature_contract": "features-v1",
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "cpu_count": 16,
+    "total_gib": 15.77,
+    "available_gib": 2.02
+  },
+  "amount_type_rule_validation_ap": 0.0038180031820199104,
+  "amount_type_rule_types": [
+    "CASH_OUT",
+    "TRANSFER"
+  ],
+  "candidates": [
+    {
+      "id": "logistic_regression:base:{\"C\": 0.01}",
+      "kind": "logistic_regression",
+      "feature_set": "base",
+      "features": [
+        "type_onehot",
+        "log1p_amount"
+      ],
+      "params": {
+        "C": 0.01
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount"
+      ],
+      "fit_seconds": 3.49,
+      "eligible": true,
+      "validation_ap": 0.003105977099617171,
+      "validation_auc": 0.8826434348698308,
+      "validation_recall_k100": 0.005194805194805195,
+      "validation_precision_k100": 0.012987012987012988,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 2,
+            "false_alerts": 153,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.012903225806451613,
+            "recall": 0.0025974025974025974,
+            "false_alerts_per_1000_legitimate": 0.11837386800153189
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 0,
+            "false_alerts": 100,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.12106962593117676
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 4,
+            "false_alerts": 304,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.012987012987012988,
+            "recall": 0.005194805194805195,
+            "false_alerts_per_1000_legitimate": 0.23520036517951437
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 0,
+            "false_alerts": 200,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.24213925186235352
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 6,
+            "false_alerts": 610,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.00974025974025974,
+            "recall": 0.007792207792207792,
+            "false_alerts_per_1000_legitimate": 0.47194810118257813
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 0,
+            "false_alerts": 400,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.48427850372470704
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base:{\"C\": 1.0}",
+      "kind": "logistic_regression",
+      "feature_set": "base",
+      "features": [
+        "type_onehot",
+        "log1p_amount"
+      ],
+      "params": {
+        "C": 1.0
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount"
+      ],
+      "fit_seconds": 4.0,
+      "eligible": true,
+      "validation_ap": 0.003105777952056264,
+      "validation_auc": 0.8826445562112847,
+      "validation_recall_k100": 0.005194805194805195,
+      "validation_precision_k100": 0.012987012987012988,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 2,
+            "false_alerts": 153,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.012903225806451613,
+            "recall": 0.0025974025974025974,
+            "false_alerts_per_1000_legitimate": 0.11837386800153189
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 0,
+            "false_alerts": 100,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.12106962593117676
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 4,
+            "false_alerts": 304,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.012987012987012988,
+            "recall": 0.005194805194805195,
+            "false_alerts_per_1000_legitimate": 0.23520036517951437
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 0,
+            "false_alerts": 200,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.24213925186235352
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 6,
+            "false_alerts": 610,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.00974025974025974,
+            "recall": 0.007792207792207792,
+            "false_alerts_per_1000_legitimate": 0.47194810118257813
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 0,
+            "false_alerts": 400,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.48427850372470704
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base_novelty:{\"C\": 0.01}",
+      "kind": "logistic_regression",
+      "feature_set": "base_novelty",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior"
+      ],
+      "params": {
+        "C": 0.01
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior"
+      ],
+      "fit_seconds": 3.74,
+      "eligible": true,
+      "validation_ap": 0.011891761057974137,
+      "validation_auc": 0.914201944251344,
+      "validation_recall_k100": 0.02727272727272727,
+      "validation_precision_k100": 0.06818181818181818,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 14,
+            "false_alerts": 141,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.09032258064516129,
+            "recall": 0.01818181818181818,
+            "false_alerts_per_1000_legitimate": 0.10908964306023528
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 3,
+            "false_alerts": 97,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.03,
+            "recall": 0.006147540983606557,
+            "false_alerts_per_1000_legitimate": 0.11743753715324146
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 21,
+            "false_alerts": 287,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.06818181818181818,
+            "recall": 0.02727272727272727,
+            "false_alerts_per_1000_legitimate": 0.22204771317934416
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 3,
+            "false_alerts": 197,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.015,
+            "recall": 0.006147540983606557,
+            "false_alerts_per_1000_legitimate": 0.23850716308441822
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 31,
+            "false_alerts": 585,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05032467532467533,
+            "recall": 0.04025974025974026,
+            "false_alerts_per_1000_legitimate": 0.45260596588821017
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 3,
+            "false_alerts": 397,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0075,
+            "recall": 0.006147540983606557,
+            "false_alerts_per_1000_legitimate": 0.48064641494677174
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base_novelty:{\"C\": 1.0}",
+      "kind": "logistic_regression",
+      "feature_set": "base_novelty",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior"
+      ],
+      "params": {
+        "C": 1.0
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior"
+      ],
+      "fit_seconds": 4.48,
+      "eligible": true,
+      "validation_ap": 0.011875125353637711,
+      "validation_auc": 0.9142329107587538,
+      "validation_recall_k100": 0.02727272727272727,
+      "validation_precision_k100": 0.06818181818181818,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 14,
+            "false_alerts": 141,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.09032258064516129,
+            "recall": 0.01818181818181818,
+            "false_alerts_per_1000_legitimate": 0.10908964306023528
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 3,
+            "false_alerts": 97,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.03,
+            "recall": 0.006147540983606557,
+            "false_alerts_per_1000_legitimate": 0.11743753715324146
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 21,
+            "false_alerts": 287,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.06818181818181818,
+            "recall": 0.02727272727272727,
+            "false_alerts_per_1000_legitimate": 0.22204771317934416
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 3,
+            "false_alerts": 197,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.015,
+            "recall": 0.006147540983606557,
+            "false_alerts_per_1000_legitimate": 0.23850716308441822
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 31,
+            "false_alerts": 585,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05032467532467533,
+            "recall": 0.04025974025974026,
+            "false_alerts_per_1000_legitimate": 0.45260596588821017
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 3,
+            "false_alerts": 397,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0075,
+            "recall": 0.006147540983606557,
+            "false_alerts_per_1000_legitimate": 0.48064641494677174
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base_history:{\"C\": 0.01}",
+      "kind": "logistic_regression",
+      "feature_set": "base_history",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "params": {
+        "C": 0.01
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "fit_seconds": 5.62,
+      "eligible": true,
+      "validation_ap": 0.012026047164967347,
+      "validation_auc": 0.917477473571484,
+      "validation_recall_k100": 0.02207792207792208,
+      "validation_precision_k100": 0.05519480519480519,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 9,
+            "false_alerts": 146,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05806451612903226,
+            "recall": 0.011688311688311689,
+            "false_alerts_per_1000_legitimate": 0.11295807011910887
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 0,
+            "false_alerts": 100,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.12106962593117676
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 17,
+            "false_alerts": 291,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05519480519480519,
+            "recall": 0.02207792207792208,
+            "false_alerts_per_1000_legitimate": 0.22514245482644302
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 0,
+            "false_alerts": 200,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.24213925186235352
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 28,
+            "false_alerts": 588,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.045454545454545456,
+            "recall": 0.03636363636363636,
+            "false_alerts_per_1000_legitimate": 0.45492702212353436
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 0,
+            "false_alerts": 400,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.48427850372470704
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base_history:{\"C\": 1.0}",
+      "kind": "logistic_regression",
+      "feature_set": "base_history",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "params": {
+        "C": 1.0
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "fit_seconds": 8.06,
+      "eligible": true,
+      "validation_ap": 0.012034930571257874,
+      "validation_auc": 0.9175112353942386,
+      "validation_recall_k100": 0.02077922077922078,
+      "validation_precision_k100": 0.05194805194805195,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 9,
+            "false_alerts": 146,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05806451612903226,
+            "recall": 0.011688311688311689,
+            "false_alerts_per_1000_legitimate": 0.11295807011910887
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 0,
+            "false_alerts": 100,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.12106962593117676
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 16,
+            "false_alerts": 292,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05194805194805195,
+            "recall": 0.02077922077922078,
+            "false_alerts_per_1000_legitimate": 0.22591614023821774
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 0,
+            "false_alerts": 200,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.24213925186235352
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 28,
+            "false_alerts": 588,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.045454545454545456,
+            "recall": 0.03636363636363636,
+            "false_alerts_per_1000_legitimate": 0.45492702212353436
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 0,
+            "false_alerts": 400,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.48427850372470704
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base_history_window:{\"C\": 0.01}",
+      "kind": "logistic_regression",
+      "feature_set": "base_history_window",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "params": {
+        "C": 0.01
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "fit_seconds": 8.38,
+      "eligible": true,
+      "validation_ap": 0.012098727162515832,
+      "validation_auc": 0.9156775286237228,
+      "validation_recall_k100": 0.01948051948051948,
+      "validation_precision_k100": 0.048701298701298704,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 8,
+            "false_alerts": 147,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05161290322580645,
+            "recall": 0.01038961038961039,
+            "false_alerts_per_1000_legitimate": 0.11373175553088359
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 0,
+            "false_alerts": 100,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.12106962593117676
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 15,
+            "false_alerts": 293,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.048701298701298704,
+            "recall": 0.01948051948051948,
+            "false_alerts_per_1000_legitimate": 0.22668982564999246
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 0,
+            "false_alerts": 200,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.24213925186235352
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 27,
+            "false_alerts": 589,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.04383116883116883,
+            "recall": 0.03506493506493506,
+            "false_alerts_per_1000_legitimate": 0.45570070753530906
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 0,
+            "false_alerts": 400,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.48427850372470704
+          }
+        }
+      }
+    },
+    {
+      "id": "logistic_regression:base_history_window:{\"C\": 1.0}",
+      "kind": "logistic_regression",
+      "feature_set": "base_history_window",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "params": {
+        "C": 1.0
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "fit_seconds": 8.3,
+      "eligible": true,
+      "validation_ap": 0.012102383174571667,
+      "validation_auc": 0.9156895579246964,
+      "validation_recall_k100": 0.01948051948051948,
+      "validation_precision_k100": 0.048701298701298704,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 8,
+            "false_alerts": 147,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.05161290322580645,
+            "recall": 0.01038961038961039,
+            "false_alerts_per_1000_legitimate": 0.11373175553088359
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 0,
+            "false_alerts": 100,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.12106962593117676
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 15,
+            "false_alerts": 293,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.048701298701298704,
+            "recall": 0.01948051948051948,
+            "false_alerts_per_1000_legitimate": 0.22668982564999246
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 0,
+            "false_alerts": 200,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.24213925186235352
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 27,
+            "false_alerts": 589,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.04383116883116883,
+            "recall": 0.03506493506493506,
+            "false_alerts_per_1000_legitimate": 0.45570070753530906
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 0,
+            "false_alerts": 400,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "false_alerts_per_1000_legitimate": 0.48427850372470704
+          }
+        }
+      }
+    },
+    {
+      "id": "hist_gradient_boosting:base_history:{\"class_weight\": \"balanced\", \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15}",
+      "kind": "hist_gradient_boosting",
+      "feature_set": "base_history",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "params": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "max_iter": 200,
+        "class_weight": "balanced"
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "fit_seconds": 18.8,
+      "eligible": true,
+      "validation_ap": 0.15249528100437612,
+      "validation_auc": 0.9551343582588482,
+      "validation_recall_k100": 0.13116883116883116,
+      "validation_precision_k100": 0.32792207792207795,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 97,
+            "false_alerts": 58,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.6258064516129033,
+            "recall": 0.12597402597402596,
+            "false_alerts_per_1000_legitimate": 0.04487375388293366
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 63,
+            "false_alerts": 37,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.63,
+            "recall": 0.1290983606557377,
+            "false_alerts_per_1000_legitimate": 0.0447957615945354
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 101,
+            "false_alerts": 207,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.32792207792207795,
+            "recall": 0.13116883116883116,
+            "false_alerts_per_1000_legitimate": 0.16015288023736668
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 65,
+            "false_alerts": 135,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.325,
+            "recall": 0.13319672131147542,
+            "false_alerts_per_1000_legitimate": 0.16344399500708862
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 110,
+            "false_alerts": 506,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.17857142857142858,
+            "recall": 0.14285714285714285,
+            "false_alerts_per_1000_legitimate": 0.39148481835800747
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 67,
+            "false_alerts": 333,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.1675,
+            "recall": 0.13729508196721313,
+            "false_alerts_per_1000_legitimate": 0.40316185435081864
+          }
+        }
+      }
+    },
+    {
+      "id": "hist_gradient_boosting:base_history:{\"class_weight\": null, \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 31}",
+      "kind": "hist_gradient_boosting",
+      "feature_set": "base_history",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "params": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "max_iter": 200,
+        "class_weight": null
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum"
+      ],
+      "fit_seconds": 18.72,
+      "eligible": true,
+      "validation_ap": 0.05325101492577185,
+      "validation_auc": 0.7859277329595664,
+      "validation_recall_k100": 0.09090909090909091,
+      "validation_precision_k100": 0.22727272727272727,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 55,
+            "false_alerts": 100,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.3548387096774194,
+            "recall": 0.07142857142857142,
+            "false_alerts_per_1000_legitimate": 0.07736854117747183
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 38,
+            "false_alerts": 62,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.38,
+            "recall": 0.0778688524590164,
+            "false_alerts_per_1000_legitimate": 0.07506316807732959
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 70,
+            "false_alerts": 238,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.22727272727272727,
+            "recall": 0.09090909090909091,
+            "false_alerts_per_1000_legitimate": 0.18413712800238294
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 46,
+            "false_alerts": 154,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.23,
+            "recall": 0.0942622950819672,
+            "false_alerts_per_1000_legitimate": 0.18644722393401222
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 76,
+            "false_alerts": 540,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.12337662337662338,
+            "recall": 0.0987012987012987,
+            "false_alerts_per_1000_legitimate": 0.4177901223583479
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 50,
+            "false_alerts": 350,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.125,
+            "recall": 0.10245901639344263,
+            "false_alerts_per_1000_legitimate": 0.42374369075911866
+          }
+        }
+      }
+    },
+    {
+      "id": "hist_gradient_boosting:base_history_window:{\"class_weight\": \"balanced\", \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15}",
+      "kind": "hist_gradient_boosting",
+      "feature_set": "base_history_window",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "params": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "max_iter": 200,
+        "class_weight": "balanced"
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "fit_seconds": 19.55,
+      "eligible": true,
+      "validation_ap": 0.1603848023307718,
+      "validation_auc": 0.9554603028797526,
+      "validation_recall_k100": 0.14025974025974025,
+      "validation_precision_k100": 0.35064935064935066,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 102,
+            "false_alerts": 53,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.6580645161290323,
+            "recall": 0.13246753246753246,
+            "false_alerts_per_1000_legitimate": 0.04100532682406007
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 69,
+            "false_alerts": 31,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.69,
+            "recall": 0.1413934426229508,
+            "false_alerts_per_1000_legitimate": 0.03753158403866479
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 108,
+            "false_alerts": 200,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.35064935064935066,
+            "recall": 0.14025974025974025,
+            "false_alerts_per_1000_legitimate": 0.15473708235494366
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 72,
+            "false_alerts": 128,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.36,
+            "recall": 0.14754098360655737,
+            "false_alerts_per_1000_legitimate": 0.15496912119190626
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 114,
+            "false_alerts": 502,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.18506493506493507,
+            "recall": 0.14805194805194805,
+            "false_alerts_per_1000_legitimate": 0.3883900767109086
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 73,
+            "false_alerts": 327,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.1825,
+            "recall": 0.14959016393442623,
+            "false_alerts_per_1000_legitimate": 0.39589767679494803
+          }
+        }
+      }
+    },
+    {
+      "id": "hist_gradient_boosting:base_history_window:{\"class_weight\": null, \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 31}",
+      "kind": "hist_gradient_boosting",
+      "feature_set": "base_history_window",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "params": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "max_iter": 200,
+        "class_weight": null
+      },
+      "model_columns": [
+        "type_onehot=CASH_IN",
+        "type_onehot=CASH_OUT",
+        "type_onehot=DEBIT",
+        "type_onehot=PAYMENT",
+        "type_onehot=TRANSFER",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last"
+      ],
+      "fit_seconds": 19.0,
+      "eligible": true,
+      "validation_ap": 0.0440900792381998,
+      "validation_auc": 0.77923863025328,
+      "validation_recall_k100": 0.08441558441558442,
+      "validation_precision_k100": 0.21103896103896103,
+      "capacity": {
+        "50": {
+          "k": 50,
+          "all_segments": {
+            "alerts": 155,
+            "true_positives": 37,
+            "false_alerts": 118,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.23870967741935484,
+            "recall": 0.048051948051948054,
+            "false_alerts_per_1000_legitimate": 0.09129487858941676
+          },
+          "complete_days_only": {
+            "alerts": 100,
+            "true_positives": 22,
+            "false_alerts": 78,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.22,
+            "recall": 0.045081967213114756,
+            "false_alerts_per_1000_legitimate": 0.09443430822631788
+          }
+        },
+        "100": {
+          "k": 100,
+          "all_segments": {
+            "alerts": 308,
+            "true_positives": 65,
+            "false_alerts": 243,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.21103896103896103,
+            "recall": 0.08441558441558442,
+            "false_alerts_per_1000_legitimate": 0.18800555506125655
+          },
+          "complete_days_only": {
+            "alerts": 200,
+            "true_positives": 45,
+            "false_alerts": 155,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.225,
+            "recall": 0.09221311475409837,
+            "false_alerts_per_1000_legitimate": 0.18765792019332397
+          }
+        },
+        "200": {
+          "k": 200,
+          "all_segments": {
+            "alerts": 616,
+            "true_positives": 74,
+            "false_alerts": 542,
+            "positives": 770,
+            "legitimate": 1292515,
+            "precision": 0.12012987012987013,
+            "recall": 0.09610389610389611,
+            "false_alerts_per_1000_legitimate": 0.41933749318189734
+          },
+          "complete_days_only": {
+            "alerts": 400,
+            "true_positives": 49,
+            "false_alerts": 351,
+            "positives": 488,
+            "legitimate": 825971,
+            "precision": 0.1225,
+            "recall": 0.10040983606557377,
+            "false_alerts_per_1000_legitimate": 0.4249543870184304
+          }
+        }
+      }
+    }
+  ],
+  "ablations": [
+    {
+      "id": "ablation:history_window_plus_hour",
+      "features": [
+        "type_onehot",
+        "log1p_amount",
+        "dest_has_prior",
+        "dest_prior_count",
+        "dest_prior_amount_sum",
+        "dest_prior_count_24h",
+        "dest_steps_since_last",
+        "hour_of_day"
+      ],
+      "eligible": false,
+      "validation_ap": 0.3519928269152259,
+      "validation_recall_k100": 0.3038961038961039
+    }
+  ],
+  "decision": {
+    "champion": "hist_gradient_boosting:base_history_window:{\"class_weight\": \"balanced\", \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15}",
+    "reason": "highest AP band (>= 0.157177); then K=100 recall, then simpler model",
+    "near_band": [
+      "hist_gradient_boosting:base_history_window:{\"class_weight\": \"balanced\", \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15}"
+    ]
+  },
+  "champion_validation_detail": {
+    "ranking": {
+      "rows": 1293285,
+      "positives": 770,
+      "prevalence": 0.0005953830748829531,
+      "average_precision": 0.1603848023307718,
+      "roc_auc": 0.9554603028797526
+    },
+    "capacity": {
+      "50": {
+        "k": 50,
+        "all_segments": {
+          "alerts": 155,
+          "true_positives": 102,
+          "false_alerts": 53,
+          "positives": 770,
+          "legitimate": 1292515,
+          "precision": 0.6580645161290323,
+          "recall": 0.13246753246753246,
+          "false_alerts_per_1000_legitimate": 0.04100532682406007
+        },
+        "complete_days_only": {
+          "alerts": 100,
+          "true_positives": 69,
+          "false_alerts": 31,
+          "positives": 488,
+          "legitimate": 825971,
+          "precision": 0.69,
+          "recall": 0.1413934426229508,
+          "false_alerts_per_1000_legitimate": 0.03753158403866479
+        },
+        "segments": [
+          {
+            "partition": "validation",
+            "day": 11,
+            "hours": 7,
+            "capacity": 15,
+            "alerts": 15,
+            "true_positives": 9,
+            "false_alerts": 6,
+            "positives": 86,
+            "legitimate": 137631,
+            "precision": 0.6,
+            "recall": 0.10465116279069768,
+            "false_alerts_per_1000_legitimate": 0.04359482965320313
+          },
+          {
+            "partition": "validation",
+            "day": 12,
+            "hours": 24,
+            "capacity": 50,
+            "alerts": 50,
+            "true_positives": 42,
+            "false_alerts": 8,
+            "positives": 242,
+            "legitimate": 428341,
+            "precision": 0.84,
+            "recall": 0.17355371900826447,
+            "false_alerts_per_1000_legitimate": 0.01867670851027569
+          },
+          {
+            "partition": "validation",
+            "day": 13,
+            "hours": 24,
+            "capacity": 50,
+            "alerts": 50,
+            "true_positives": 27,
+            "false_alerts": 23,
+            "positives": 246,
+            "legitimate": 397630,
+            "precision": 0.54,
+            "recall": 0.10975609756097561,
+            "false_alerts_per_1000_legitimate": 0.05784271810477077
+          },
+          {
+            "partition": "validation",
+            "day": 14,
+            "hours": 19,
+            "capacity": 40,
+            "alerts": 40,
+            "true_positives": 24,
+            "false_alerts": 16,
+            "positives": 196,
+            "legitimate": 328913,
+            "precision": 0.6,
+            "recall": 0.12244897959183673,
+            "false_alerts_per_1000_legitimate": 0.048645082438213146
+          }
+        ]
+      },
+      "100": {
+        "k": 100,
+        "all_segments": {
+          "alerts": 308,
+          "true_positives": 108,
+          "false_alerts": 200,
+          "positives": 770,
+          "legitimate": 1292515,
+          "precision": 0.35064935064935066,
+          "recall": 0.14025974025974025,
+          "false_alerts_per_1000_legitimate": 0.15473708235494366
+        },
+        "complete_days_only": {
+          "alerts": 200,
+          "true_positives": 72,
+          "false_alerts": 128,
+          "positives": 488,
+          "legitimate": 825971,
+          "precision": 0.36,
+          "recall": 0.14754098360655737,
+          "false_alerts_per_1000_legitimate": 0.15496912119190626
+        },
+        "segments": [
+          {
+            "partition": "validation",
+            "day": 11,
+            "hours": 7,
+            "capacity": 29,
+            "alerts": 29,
+            "true_positives": 12,
+            "false_alerts": 17,
+            "positives": 86,
+            "legitimate": 137631,
+            "precision": 0.41379310344827586,
+            "recall": 0.13953488372093023,
+            "false_alerts_per_1000_legitimate": 0.12351868401740887
+          },
+          {
+            "partition": "validation",
+            "day": 12,
+            "hours": 24,
+            "capacity": 100,
+            "alerts": 100,
+            "true_positives": 44,
+            "false_alerts": 56,
+            "positives": 242,
+            "legitimate": 428341,
+            "precision": 0.44,
+            "recall": 0.18181818181818182,
+            "false_alerts_per_1000_legitimate": 0.13073695957192985
+          },
+          {
+            "partition": "validation",
+            "day": 13,
+            "hours": 24,
+            "capacity": 100,
+            "alerts": 100,
+            "true_positives": 28,
+            "false_alerts": 72,
+            "positives": 246,
+            "legitimate": 397630,
+            "precision": 0.28,
+            "recall": 0.11382113821138211,
+            "false_alerts_per_1000_legitimate": 0.18107285667580414
+          },
+          {
+            "partition": "validation",
+            "day": 14,
+            "hours": 19,
+            "capacity": 79,
+            "alerts": 79,
+            "true_positives": 24,
+            "false_alerts": 55,
+            "positives": 196,
+            "legitimate": 328913,
+            "precision": 0.3037974683544304,
+            "recall": 0.12244897959183673,
+            "false_alerts_per_1000_legitimate": 0.1672174708813577
+          }
+        ]
+      },
+      "200": {
+        "k": 200,
+        "all_segments": {
+          "alerts": 616,
+          "true_positives": 114,
+          "false_alerts": 502,
+          "positives": 770,
+          "legitimate": 1292515,
+          "precision": 0.18506493506493507,
+          "recall": 0.14805194805194805,
+          "false_alerts_per_1000_legitimate": 0.3883900767109086
+        },
+        "complete_days_only": {
+          "alerts": 400,
+          "true_positives": 73,
+          "false_alerts": 327,
+          "positives": 488,
+          "legitimate": 825971,
+          "precision": 0.1825,
+          "recall": 0.14959016393442623,
+          "false_alerts_per_1000_legitimate": 0.39589767679494803
+        },
+        "segments": [
+          {
+            "partition": "validation",
+            "day": 11,
+            "hours": 7,
+            "capacity": 58,
+            "alerts": 58,
+            "true_positives": 15,
+            "false_alerts": 43,
+            "positives": 86,
+            "legitimate": 137631,
+            "precision": 0.25862068965517243,
+            "recall": 0.1744186046511628,
+            "false_alerts_per_1000_legitimate": 0.3124296125146224
+          },
+          {
+            "partition": "validation",
+            "day": 12,
+            "hours": 24,
+            "capacity": 200,
+            "alerts": 200,
+            "true_positives": 45,
+            "false_alerts": 155,
+            "positives": 242,
+            "legitimate": 428341,
+            "precision": 0.225,
+            "recall": 0.1859504132231405,
+            "false_alerts_per_1000_legitimate": 0.36186122738659154
+          },
+          {
+            "partition": "validation",
+            "day": 13,
+            "hours": 24,
+            "capacity": 200,
+            "alerts": 200,
+            "true_positives": 28,
+            "false_alerts": 172,
+            "positives": 246,
+            "legitimate": 397630,
+            "precision": 0.14,
+            "recall": 0.11382113821138211,
+            "false_alerts_per_1000_legitimate": 0.43256293539219876
+          },
+          {
+            "partition": "validation",
+            "day": 14,
+            "hours": 19,
+            "capacity": 158,
+            "alerts": 158,
+            "true_positives": 26,
+            "false_alerts": 132,
+            "positives": 196,
+            "legitimate": 328913,
+            "precision": 0.16455696202531644,
+            "recall": 0.1326530612244898,
+            "false_alerts_per_1000_legitimate": 0.40132193011525846
+          }
+        ]
+      }
+    },
+    "by_type_k100": [
+      {
+        "type": "CASH_IN",
+        "rows": 285430,
+        "positives": 0,
+        "prevalence": 0.0,
+        "average_precision": null,
+        "roc_auc": null,
+        "cap_alerts": 0,
+        "cap_true_positives": 0,
+        "cap_false_alerts": 0,
+        "cap_positives": 0,
+        "cap_legitimate": 285430,
+        "cap_precision": null,
+        "cap_recall": null,
+        "cap_false_alerts_per_1000_legitimate": 0.0
+      },
+      {
+        "type": "CASH_OUT",
+        "rows": 456641,
+        "positives": 385,
+        "prevalence": 0.0008431130800782234,
+        "average_precision": 0.3390722250649023,
+        "roc_auc": 0.7826842768152034,
+        "cap_alerts": 105,
+        "cap_true_positives": 101,
+        "cap_false_alerts": 4,
+        "cap_positives": 385,
+        "cap_legitimate": 456256,
+        "cap_precision": 0.9619047619047619,
+        "cap_recall": 0.2623376623376623,
+        "cap_false_alerts_per_1000_legitimate": 0.008767007995511292
+      },
+      {
+        "type": "DEBIT",
+        "rows": 9044,
+        "positives": 0,
+        "prevalence": 0.0,
+        "average_precision": null,
+        "roc_auc": null,
+        "cap_alerts": 0,
+        "cap_true_positives": 0,
+        "cap_false_alerts": 0,
+        "cap_positives": 0,
+        "cap_legitimate": 9044,
+        "cap_precision": null,
+        "cap_recall": null,
+        "cap_false_alerts_per_1000_legitimate": 0.0
+      },
+      {
+        "type": "PAYMENT",
+        "rows": 433249,
+        "positives": 0,
+        "prevalence": 0.0,
+        "average_precision": null,
+        "roc_auc": null,
+        "cap_alerts": 0,
+        "cap_true_positives": 0,
+        "cap_false_alerts": 0,
+        "cap_positives": 0,
+        "cap_legitimate": 433249,
+        "cap_precision": null,
+        "cap_recall": null,
+        "cap_false_alerts_per_1000_legitimate": 0.0
+      },
+      {
+        "type": "TRANSFER",
+        "rows": 108921,
+        "positives": 385,
+        "prevalence": 0.0035346719181792306,
+        "average_precision": 0.02810246949184646,
+        "roc_auc": 0.9398302819388911,
+        "cap_alerts": 203,
+        "cap_true_positives": 7,
+        "cap_false_alerts": 196,
+        "cap_positives": 385,
+        "cap_legitimate": 108536,
+        "cap_precision": 0.034482758620689655,
+        "cap_recall": 0.01818181818181818,
+        "cap_false_alerts_per_1000_legitimate": 1.805852436058082
+      }
+    ],
+    "mixed_hour_diagnostics_k100": {
+      "mixed": {
+        "rows": 1262867,
+        "positives": 574,
+        "selected_true_positives": 85,
+        "ranking": {
+          "rows": 1262867,
+          "positives": 574,
+          "prevalence": 0.00045452133914339354,
+          "average_precision": 0.16087531481151024,
+          "roc_auc": 0.9551654684522449
+        }
+      },
+      "pure_positive": {
+        "rows": 196,
+        "positives": 196,
+        "selected_true_positives": 23,
+        "ranking": {
+          "rows": 196,
+          "positives": 196,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null
+        }
+      },
+      "no_positive": {
+        "rows": 30222,
+        "positives": 0,
+        "selected_true_positives": 0,
+        "ranking": {
+          "rows": 30222,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null
+        }
+      }
+    }
+  },
+  "runtime": {
+    "total_seconds": 285.93,
+    "peak_python_process_mib": 2120.0
+  }
+}

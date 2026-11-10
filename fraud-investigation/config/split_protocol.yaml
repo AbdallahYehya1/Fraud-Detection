@@ -1,0 +1,66 @@
+# Chronological evaluation protocol. Frozen 2026-11-09 before any model or
+# policy was fitted or scored. Changing any value requires a new protocol_version
+# and a recorded reason; boundaries are never moved to improve a result.
+protocol_version: split-v1
+status: frozen
+frozen_date: 2026-11-09
+dataset_key: PS2
+csv_sha256: 16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b
+
+time:
+  unit: relative simulation hour ("step"); no calendar timestamp is asserted
+  observed_min_step: 1
+  observed_max_step: 743
+  within_hour_order: >-
+    Not known. Rows inside one step are treated as simultaneous. source_row may
+    order replay cursors but never creates history.
+  simulation_day: floor((step - 1) / 24)   # day 0 = steps 1-24; day 30 = steps 721-743 (23 observed hours)
+
+# Whole-hour partitions chosen in the planning profile at ~60%/80% of cumulative
+# row volume. Every row of a step belongs to exactly one partition.
+partitions:
+  train:      {first_step: 1,   last_step: 281}
+  validation: {first_step: 282, last_step: 355}
+  test:       {first_step: 356, last_step: 743}
+
+access_rules:
+  train: fit preprocessing and model parameters
+  validation: select features, model, review policy and thresholds
+  test: >-
+    evaluated once, after model, feature version and policy are recorded;
+    results are never used for further tuning
+
+# Partition cutoffs do not fall on day boundaries (281 = day 11 hour 17;
+# 355 = day 14 hour 19). Daily review policies operate on partition-day segments.
+daily_policy:
+  segment: (partition, simulation_day)
+  partial_segments:
+    - {partition: train,      day: 11, steps: "265-281", hours: 17}
+    - {partition: validation, day: 11, steps: "282-288", hours: 7}
+    - {partition: validation, day: 14, steps: "337-355", hours: 19}
+    - {partition: test,       day: 14, steps: "356-360", hours: 5}
+    - {partition: test,       day: 30, steps: "721-743", hours: 23}
+  partial_capacity_rule: >-
+    capacity for a segment = round(K * observed_hours / 24), minimum 1; results
+    are reported both including and excluding partial segments
+  candidate_population: every row of the segment (all transaction types)
+  tie_break: ascending event_id hash rank (label-independent, see seeds.tie_break)
+  finalization: once per segment at its last observed step; idempotent
+
+history:
+  rule: features at step s use only rows with step < s
+  initialization: >-
+    full prior warm-up. History state for any partition, replay or API run
+    starting at step s0 is built from every unlabelled row in steps 1..s0-1,
+    regardless of partition. Labels and the policy flag never enter history state.
+  cold_start: rows with no eligible earlier record carry explicit missing-history indicators
+
+seeds:
+  global: 20261109
+  random_daily_ranking: 20261109
+  tie_break: sha256(event_id) ascending; no seed, no label
+
+evaluator_only_diagnostics:
+  - pure-positive hours (every row labelled positive)
+  - mixed-label hours
+  # Label-defined subsets never become features, serving filters or assistant evidence.

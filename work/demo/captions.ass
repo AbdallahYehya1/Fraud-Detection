@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1600
+PlayResY: 1120
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Segoe UI,26,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,40,40,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.68,0:00:14.69,Default,,0,0,0,,{\b1\fs28}1 / 7  •  FRAUD REVIEW WORKBENCH{\b0\fs26}\NPrioritize recorded transactions for human review. Synthetic PaySim v2; all services run locally.
+Dialogue: 0,0:00:14.69,0:00:31.74,Default,,0,0,0,,{\b1\fs28}A REPRODUCIBLE MODEL AND REVIEW POLICY{\b0\fs26}\NFrozen features and model version. Top 100 reviews per simulation day; ranking scores are not probabilities.
+Dialogue: 0,0:00:31.74,0:00:45.75,Default,,0,0,0,,{\b1\fs28}2 / 7  •  MEASURED OFFLINE RESULTS{\b0\fs26}\NChampion: 1,189 of 4,250 positives found at 100/day. The amount/type rule found 670.
+Dialogue: 0,0:00:45.75,0:00:59.99,Default,,0,0,0,,{\b1\fs28}SIMULATOR LIMITATIONS STAY VISIBLE{\b0\fs26}\NMany hours contain only fraud-labelled rows. Mixed-hour hits: 505 of 2,000; no real-bank savings claim.
+Dialogue: 0,0:00:59.99,0:01:20.21,Default,,0,0,0,,{\b1\fs28}3 / 7  •  A CAPACITY-LIMITED ANALYST QUEUE{\b0\fs26}\NDay 15: ranked alerts, simulation units and explicit missing-history indicators.
+Dialogue: 0,0:01:20.21,0:01:39.24,Default,,0,0,0,,{\b1\fs28}4 / 7  •  EVIDENCE FOR THIS CASE{\b0\fs26}\NThe case records its scoring step and review cutoff. Model associations are not proof of fraud.
+Dialogue: 0,0:01:39.24,0:01:57.36,Default,,0,0,0,,{\b1\fs28}COMPUTED FACTS AND KNOWN GAPS{\b0\fs26}\NSource-linked facts are separated from missing device, identity and customer information.
+Dialogue: 0,0:01:57.36,0:02:14.46,Default,,0,0,0,,{\b1\fs28}HISTORY AT SCORING VS. EVIDENCE AT REVIEW{\b0\fs26}\NA second case shows earlier recipient records and later review-time records in separate sections.
+Dialogue: 0,0:02:14.46,0:03:15.68,Default,,0,0,0,,{\b1\fs28}5 / 7  •  LIVE LOCAL INVESTIGATION ASSISTANT{\b0\fs26}\NOne case, read-only evidence tools and a fixed cutoff. This generation is shown in real time.
+Dialogue: 0,0:03:15.68,0:03:39.72,Default,,0,0,0,,{\b1\fs28}CHECKED ANSWER, VISIBLE REFERENCES{\b0\fs26}\NThe system-added scope line is distinct from model text. The assistant did not change the case.
+Dialogue: 0,0:03:39.72,0:03:47.22,Default,,0,0,0,,{\b1\fs28}6 / 7  •  THE HUMAN MAKES THE DECISION{\b0\fs26}\NStart review, add an analyst note, and close with “needs more information.” No fraud label is asserted.
+Dialogue: 0,0:03:47.22,0:03:56.47,Default,,0,0,0,,{\b1\fs28}A HUMAN DISPOSITION, RECORDED EXPLICITLY{\b0\fs26}\NReview is in progress. The analyst chooses “needs more information” without asserting a fraud outcome.
+Dialogue: 0,0:03:56.47,0:04:08.86,Default,,0,0,0,,{\b1\fs28}AN APPEND-ONLY REVIEW TRAIL{\b0\fs26}\NThe audit records the human actor, the previous state and the closed case disposition.
+Dialogue: 0,0:04:08.86,0:04:25.86,Default,,0,0,0,,{\b1\fs28}7 / 7  •  REPRODUCIBLE, WITH HONEST LIMITS{\b0\fs26}\N101 tests pass. Fresh assistant holdout: 10/12; its two documented failures produced no unsafe delivered output.
+Dialogue: 0,0:04:25.86,0:04:39.88,Default,,0,0,0,,{\b1\fs28}KNOWN ASSISTANT LIMITATIONS{\b0\fs26}\NQuestion-number filtering, refusal grading and short note paraphrases need further work. A small holdout is not a universal safety claim.

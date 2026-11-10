@@ -1,0 +1,92 @@
+{
+  "report": "day5-run-evaluation",
+  "run_id": "demo-test-d14-16",
+  "model_version": "champion-v1",
+  "policy_version": "policy-v1",
+  "daily_capacity": 100,
+  "steps": [
+    356,
+    408
+  ],
+  "labels_loaded": 873533,
+  "scope": "Evaluator-only aggregates for a recorded replay of synthetic data. No per-case labels are exposed to the investigation workflow.",
+  "segments": [
+    {
+      "partition": "test",
+      "day": 14,
+      "first_step": 356,
+      "last_step": 360,
+      "hours": 5,
+      "capacity": 21,
+      "population": 72173,
+      "positives": 54,
+      "true_positives": 12,
+      "alerts": 21,
+      "precision": 0.5714285714285714,
+      "recall": 0.2222222222222222
+    },
+    {
+      "partition": "test",
+      "day": 15,
+      "first_step": 361,
+      "last_step": 384,
+      "hours": 24,
+      "capacity": 100,
+      "population": 375594,
+      "positives": 252,
+      "true_positives": 44,
+      "alerts": 100,
+      "precision": 0.44,
+      "recall": 0.1746031746031746
+    },
+    {
+      "partition": "test",
+      "day": 16,
+      "first_step": 385,
+      "last_step": 408,
+      "hours": 24,
+      "capacity": 100,
+      "population": 425766,
+      "positives": 320,
+      "true_positives": 57,
+      "alerts": 100,
+      "precision": 0.57,
+      "recall": 0.178125
+    }
+  ],
+  "total": {
+    "population": 873533,
+    "positives": 626,
+    "true_positives": 113,
+    "alerts": 221,
+    "precision": 0.5113122171945701,
+    "recall": 0.1805111821086262
+  },
+  "offline_segment_crosscheck": [
+    {
+      "day": 14,
+      "offline_true_positives": 12,
+      "replay_true_positives": 12,
+      "offline_capacity": 21,
+      "replay_capacity": 21,
+      "match": true
+    },
+    {
+      "day": 15,
+      "offline_true_positives": 44,
+      "replay_true_positives": 44,
+      "offline_capacity": 100,
+      "replay_capacity": 100,
+      "match": true
+    },
+    {
+      "day": 16,
+      "offline_true_positives": 57,
+      "replay_true_positives": 57,
+      "offline_capacity": 100,
+      "replay_capacity": 100,
+      "match": true
+    }
+  ],
+  "seconds": 36.95
+}

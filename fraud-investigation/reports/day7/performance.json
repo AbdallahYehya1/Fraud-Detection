@@ -1,0 +1,88 @@
+{
+  "report": "day7-performance",
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "cpu_count": 16,
+    "total_gib": 15.77,
+    "available_gib": 3.1
+  },
+  "hardware_note": "Intel i7-11800H (16 logical CPUs), 15.77 GiB RAM, RTX 3060 Laptop 6 GiB (GPU used only by local LLM inference, via Vulkan)",
+  "memory_at_start": {
+    "total_gib": 15.77,
+    "available_gib": 3.1
+  },
+  "feature_build": {
+    "rows": 6362620,
+    "seconds": 5.73
+  },
+  "batch_scoring_test_window": {
+    "rows": 1248736,
+    "load_seconds": 0.51,
+    "design_matrix_seconds": 1.58,
+    "predict_seconds": 4.63,
+    "rows_per_second_predict": 269791,
+    "peak_python_process_mib": 1403.9
+  },
+  "replay": {
+    "source": "reports/day4/replay_consistency.json and docs/checkpoints/day-04.md",
+    "warmup_seconds": 63.37,
+    "steps_356_365_rows": 74152,
+    "steps_356_365_seconds": 30.53,
+    "demo_run_rows": 873533,
+    "demo_run_seconds": 437.83
+  },
+  "api_latency": {
+    "health": {
+      "n": 100,
+      "p50_ms": 17.4,
+      "p95_ms": 38.1,
+      "max_ms": 51.8
+    },
+    "overview": {
+      "n": 50,
+      "p50_ms": 20.2,
+      "p95_ms": 39.1,
+      "max_ms": 46.8
+    },
+    "queue_page_50": {
+      "n": 60,
+      "p50_ms": 28.4,
+      "p95_ms": 57.4,
+      "max_ms": 66.9
+    },
+    "case_evidence": {
+      "n": 200,
+      "p50_ms": 35.4,
+      "p95_ms": 60.1,
+      "max_ms": 87.1
+    },
+    "score_sequential": {
+      "n": 200,
+      "p50_ms": 33.8,
+      "p95_ms": 61.6,
+      "max_ms": 77.1
+    },
+    "score_concurrency_4": {
+      "n": 200,
+      "p50_ms": 69.9,
+      "p95_ms": 128.8,
+      "max_ms": 155.3,
+      "throughput_per_second": 51.5
+    },
+    "score_concurrency_8": {
+      "n": 200,
+      "p50_ms": 159.6,
+      "p95_ms": 183.6,
+      "max_ms": 205.6,
+      "throughput_per_second": 50.0
+    },
+    "client_note": "Measured with persistent HTTP clients against 127.0.0.1. A new client per request added ~240 ms; addressing 'localhost' added ~2.3 s per new connection on this machine."
+  },
+  "memory_at_end": {
+    "total_gib": 15.77,
+    "available_gib": 2.93
+  },
+  "total_seconds": 46.56
+}

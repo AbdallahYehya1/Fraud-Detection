@@ -1,0 +1,64 @@
+{
+  "frozen_at_utc": "2026-11-09T20:57:13+00:00",
+  "model_version": "champion-v1",
+  "candidate_id": "hist_gradient_boosting:base_history_window:{\"class_weight\": \"balanced\", \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15}",
+  "kind": "hist_gradient_boosting",
+  "params": {
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 15,
+    "max_iter": 200,
+    "class_weight": "balanced"
+  },
+  "features": [
+    "type_onehot",
+    "log1p_amount",
+    "dest_has_prior",
+    "dest_prior_count",
+    "dest_prior_amount_sum",
+    "dest_prior_count_24h",
+    "dest_steps_since_last"
+  ],
+  "model_columns": [
+    "type_onehot=CASH_IN",
+    "type_onehot=CASH_OUT",
+    "type_onehot=DEBIT",
+    "type_onehot=PAYMENT",
+    "type_onehot=TRANSFER",
+    "log1p_amount",
+    "dest_has_prior",
+    "dest_prior_count",
+    "dest_prior_amount_sum",
+    "dest_prior_count_24h",
+    "dest_steps_since_last"
+  ],
+  "feature_contract": "features-v1",
+  "history_feature_table": "features-v1",
+  "split_protocol": "split-v1",
+  "selection_protocol": "selection-v1",
+  "review_policy": {
+    "version": "policy-v1",
+    "rule": "daily top-K per (partition, simulation_day) segment",
+    "k": 100,
+    "partial_segments": "pro-rated",
+    "tie_break": "sha256(event_id) ascending",
+    "reported_capacities": [
+      50,
+      100,
+      200
+    ]
+  },
+  "score_semantics": "ranking score (class-weighted booster); not a calibrated probability",
+  "seed": 20261109,
+  "csv_sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+  "artifact": {
+    "path": "models/champion-v1.joblib",
+    "sha256": "883fd97cb5ac5f8c26b38a4976072706825c53a3308216a3493f3c94b9af536a",
+    "bytes": 372896,
+    "sklearn": "1.7.2",
+    "numpy": "2.3.4",
+    "joblib": "1.6.0"
+  },
+  "validation_ap_reproduced": 0.1603848023307718,
+  "refit_seconds": 23.09,
+  "test_partition_accessed_before_freeze": false
+}
